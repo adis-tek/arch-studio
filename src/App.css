@@ -1,11 +1,7 @@
 .App {
   font-family: "Spartan", sans-serif;
   font-weight: 700;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  min-height: 100%;
 }
 
 .App-header {

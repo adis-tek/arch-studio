@@ -1,0 +1,149 @@
+@use '../../styles';
+
+@include styles.pageHeaderFaded(0px 0px 50px 0px);
+
+.about-main {
+  position: relative;
+  @include styles.flexCenter(center, column);
+  width: 100vw;
+  .about-body {
+    @include styles.flexCenter(flex-start, column);
+    .container {
+      position: relative;
+      max-width: 1092px;
+      width: 80%;
+      margin: calc(2vh + 12px) 0px 0px 0px;
+      .hero-container {
+        position: relative;
+        @include styles.flexCenter(flex-start, row);
+        .hero-image {
+          width: 635px;
+          height: 720px;
+          object-fit: cover;
+        }
+        .hero-text-container {
+          position: absolute;
+          width: 60%;
+          height: 500px;
+          background-color: white;
+          right: 0;
+          bottom: 0;
+          .about {
+            position: absolute;
+            top: -100px;
+            right: 0;
+            font-size: 200px;
+            z-index: 9999;
+            color: styles.$very-light-grey;
+          }
+          .hero-inner-text-container {
+            position: absolute;
+            width: 80%;
+            bottom: 0;
+            right: 10px;
+            .header-line {
+              margin: 0px 0px 80px 0px;
+            }
+            .h2 {
+              font-size: 56px;
+              line-height: 56px;
+              color: styles.$very-dark-blue;
+              margin: 0px 0px 50px 0px;
+              padding: 5px 0px;
+            }
+            .p-body {
+              font-size: 15px;
+              line-height: 25px;
+              color: styles.$very-dark-blue;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      .heritage-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 50px 0px 50px 0px;
+        margin: 150px 0px;
+        @include styles.flexCenter(space-between, row);
+        .heritage-text-container {
+          position: relative;
+          width: 50%;
+          height: 100%;
+          margin: 0px 50px 0px 0px;
+          .header-line {
+            margin: 0px 0px 50px 0px;
+          }
+          .h2 {
+            font-size: 56px;
+            line-height: 56px;
+            color: styles.$very-dark-blue;
+            margin: 0px 0px 50px 0px;
+            padding: 5px 0px;
+          }
+          .p-body {
+            width: 90%;
+            font-size: 15px;
+            line-height: 25px;
+            color: styles.$very-dark-blue;
+            font-weight: 500;
+            margin: 0px 0px 25px 0px;
+          }
+        }
+      }
+      .leaders-container {
+        position: relative;
+        @include styles.flexCenter(space-between, row);
+        width: 100%;
+        height: auto;
+        margin: 0px 0px 150px 0px;
+        .header-container {
+          display: flex;
+          width: 40%;
+          height: 900px;
+          .h2 {
+            font-size: 56px;
+            line-height: 56px;
+            color: styles.$very-dark-blue;
+            margin: 0px 0px 50px 0px;
+            padding: 5px 0px;
+          }
+        }
+        .quad-container {
+          position: relative;
+          @include styles.flexCenter(center, row);
+          .spacing {
+            width: 100%;
+            height: 5vh;
+          }
+          .couple-container {
+            position: relative;
+            @include styles.flexCenter(center, column);
+            margin: 0px 0px 0px 25px;
+            .architect-profile {
+              width: 350px;
+              height: 320px;
+            }
+            .description {
+              width: 100%;
+              .name {
+                font-size: 18px;
+                line-height: 25px;
+                color: styles.$very-dark-blue;
+                margin: 15px 0px 0px 0px;
+              }
+              .title {
+                font-size: 15px;
+                line-height: 25px;
+                color: styles.$very-dark-blue;
+                font-weight: 500;
+                margin: 7.5px 0px 0px 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

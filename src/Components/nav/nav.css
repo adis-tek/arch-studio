@@ -1,0 +1,60 @@
+/* Small (sm) */
+/* Medium (md) */
+/* Large (lg) */
+/* Extra Large (xl) */
+/* GLobal color variables */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 30px 0px 30px 0px;
+  width: 100vw;
+}
+.nav-container .nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 80vw;
+}
+@media screen and (max-width: 768px) {
+  .nav-container .nav {
+    justify-content: space-between;
+  }
+}
+.nav-container .nav .nav-logo {
+  width: 96px;
+  height: 40px;
+  margin: 0px 75px 0px 0px;
+}
+@media screen and (max-width: 421px) {
+  .nav-container .nav .nav-logo {
+    width: 77px;
+    height: 32px;
+  }
+}
+.nav-container .nav .nav-link {
+  color: #60636d;
+  font-size: 12px;
+  margin: 0px 30px 0px 30px;
+}
+.nav-container .nav .nav-link:hover {
+  color: #1b1d23;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .nav-container .nav .nav-link {
+    display: none;
+  }
+}
+.nav-container .nav .nav-mobile-icon {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .nav-container .nav .nav-mobile-icon {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,174 @@
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin button($position, $top, $right, $margin) {
+  .button {
+    position: $position;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    height: 52px;
+    background-color: rgba(27, 29, 35, 1);
+    padding: 0px 10px 0px 10px;
+    top: $top;
+    right: $right;
+    margin: $margin;
+    cursor: pointer;
+    z-index: 3;
+    &:hover {
+      background-color: rgba(96, 99, 109, 1);
+    }
+    &:active {
+      background-color: rgba(125, 130, 143, 1);
+    }
+    .button-text {
+      color: white;
+      font-size: 10px;
+      letter-spacing: 0.7px;
+      font-weight: 700;
+      margin: 0px 0px 0px 10px;
+    }
+    .button-arrow {
+      width: 24px;
+      height: 18px;
+      margin: 0px 5px 0px 20px;
+    }
+  }
+}
+
+@mixin pageHeaderFaded($margin) {
+  .page-header-faded {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 3.75vw;
+    width: 25px;
+    height: 100%;
+    .page-line {
+      position: relative;
+      margin: $margin;
+    }
+    .current-page {
+      font-size: 15px;
+      letter-spacing: 16px;
+      font-weight: 500;
+      transform: rotate(0.25turn);
+      color: rgba(200, 204, 216, 1);
+    }
+  }
+}
+
+@mixin portfolioCardDesktop1($name) {
+  .card1 {
+    position: relative;
+    width: 350px;
+    height: 560px;
+    $url: "../Assets/portfolio/desktop/#{$name}.jpg";
+    background-image: url($url);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    margin: 0px 40px 0px 0px;
+    &:hover {
+      filter: brightness(120%);
+    }
+    .featured-text-container {
+      position: absolute;
+      width: 200px;
+      bottom: 50px;
+      color: white;
+      margin: 0px 0px 0px 30px;
+      .featured-card-header {
+        position: relative;
+        font-size: 18px;
+        line-height: 25px;
+        position: absolute;
+      }
+      .p-body {
+        position: relative;
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 500;
+        margin: 35px 0px 0px 0px;
+      }
+    }
+  }
+}
+
+@mixin portfolioCardDesktop2($name) {
+  .card2 {
+    position: relative;
+    width: 350px;
+    height: 560px;
+    $url: "../Assets/portfolio/desktop/#{$name}.jpg";
+    background-image: url($url);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    margin: 0px 40px 0px 0px;
+    &:hover {
+      filter: brightness(120%);
+    }
+    .featured-text-container {
+      position: absolute;
+      width: 200px;
+      bottom: 50px;
+      color: white;
+      margin: 0px 0px 0px 30px;
+      .featured-card-header {
+        position: relative;
+        font-size: 18px;
+        line-height: 25px;
+        position: absolute;
+      }
+      .p-body {
+        position: relative;
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 500;
+        margin: 35px 0px 0px 0px;
+      }
+    }
+  }
+}
+
+@mixin portfolioCardDesktop3($name) {
+  .card3 {
+    position: relative;
+    width: 350px;
+    height: 560px;
+    $url: "../Assets/portfolio/desktop/#{$name}.jpg";
+    background-image: url($url);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    &:hover {
+      filter: brightness(120%);
+    }
+    .featured-text-container {
+      position: absolute;
+      width: 200px;
+      bottom: 50px;
+      color: white;
+      margin: 0px 0px 0px 30px;
+      .featured-card-header {
+        position: relative;
+        font-size: 18px;
+        line-height: 25px;
+        position: absolute;
+      }
+      .p-body {
+        position: relative;
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 500;
+        margin: 35px 0px 0px 0px;
+      }
+    }
+  }
+}

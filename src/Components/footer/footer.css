@@ -1,0 +1,27 @@
+/* Small (sm) */
+/* Medium (md) */
+/* Large (lg) */
+/* Extra Large (xl) */
+/* GLobal color variables */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+}
+.footer-container .footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 80vw;
+  height: 100%;
+}
+.footer-container .footer .logo {
+  width: 96px;
+  height: 40px;
+  background-color: #df5656;
+}
+
+/*# sourceMappingURL=footer.css.map */

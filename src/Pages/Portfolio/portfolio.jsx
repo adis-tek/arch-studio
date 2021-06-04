@@ -1,62 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+import React from 'react';
+import './portfolio.scss';
+import PageLine from '../../Assets/icons/page-line.png';
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Arch Studio Website Challenge</title>
-</head>
-<body>
+function portfolio() {
+    return (
+        <>
+    <div className="page-header-faded">
+    <img className="page-line" src={PageLine} />
+    <h1 className="current-page">PORTFOLIO</h1>
+    </div>
 
-  Portfolio
+    <div className="portfolio-main">
 
-  Portfolio
-  About Us
-  Contact
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  Seraph Station
-  September 2019
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    
+    <title>Frontend Mentor | Arch Studio Website Challenge</title>
+    </head>
+<body className="portfolio-body">
+<div className="container">
 
-  Eebox Building
-  August 2017
+    <div className="three-cards-container1">
+        <div className="card1">
+            <div className="featured-text-container">
+                <p className="featured-card-header">Seraph Station</p>
+                <p className="p-body">September 2019</p>
+            </div>
+        </div>
 
-  Federal II Tower
-  March 2017
+        <div className="card2">
+            <div className="featured-text-container">
+                <p className="featured-card-header">Eebox Building</p>
+                <p className="p-body">August 2017</p>
+            </div>
+        </div>
 
-  Project Del Sol
-  January 2016
+        <div className="card3">
+            <div className="featured-text-container">
+                <p className="featured-card-header">Federal II Tower</p>
+                <p className="p-body">March 2017</p>
+            </div>
+        </div>
+    </div>
 
-  Le Prototype
-  October 2015
+    <div className="three-cards-container2">
+        <div className="card1">
+            <div className="featured-text-container">
+                <p className="featured-card-header">Project Del Sol</p>
+                <p className="p-body">January 2016</p>
+            </div>
+        </div>
 
-  228B Tower
-  April 2015
+        <div className="card2">
+            <div className="featured-text-container">
+                <p className="featured-card-header">Le Prototype</p>
+                <p className="p-body">October 2015</p>
+            </div>
+        </div>
 
-  Grand Edelweiss Hotel
-  December 2013
+        <div className="card3">
+            <div className="featured-text-container">
+                <p className="featured-card-header">228B Tower</p>
+                <p className="p-body">April 2015</p>
+            </div>
+        </div>
+    </div>
 
-  Netcry Tower
-  August 2012
+    <div className="three-cards-container3">
+        <div className="card1">
+            <div className="featured-text-container">
+                <p className="featured-card-header">Grand Edelweiss Hotel</p>
+                <p className="p-body">December 2013</p>
+            </div>
+        </div>
 
-  Hypers
-  January 2012
+        <div className="card2">
+            <div className="featured-text-container">
+                <p className="featured-card-header">Netcry Tower</p>
+                <p className="p-body">August 2012</p>
+            </div>
+        </div>
 
-  SXIV Tower
-  March 2011
+        <div className="card3">
+            <div className="featured-text-container">
+                <p className="featured-card-header">Hypers</p>
+                <p className="p-body">January 2012</p>
+            </div>
+        </div>
+    </div>
 
-  Trinity Bank Tower
-  September 2010
+    <div className="three-cards-container4">
+        <div className="card1">
+            <div className="featured-text-container">
+                <p className="featured-card-header">SXIV Tower</p>
+                <p className="p-body">March 2011</p>
+            </div>
+        </div>
 
-  Project Paramour
-  February 2008
+        <div className="card2">
+            <div className="featured-text-container">
+                <p className="featured-card-header">Trinity Bank Tower</p>
+                <p className="p-body">September 2010</p>
+            </div>
+        </div>
 
-  Portfolio
-  About Us
-  Contact
+        <div className="card3">
+            <div className="featured-text-container">
+                <p className="featured-card-header">Project Paramour</p>
+                <p className="p-body">February 2008</p>
+            </div>
+        </div>
+    </div>
 
-  See Our Portfolio
+        </div>
+        </body>
+    </div>
+    </>
+    )
+}
 
-</body>
-</html>
+export default portfolio;

@@ -1,0 +1,54 @@
+@use '../../styles';
+
+.footer-container {
+  position: relative;
+  @include styles.flexCenter(center, row);
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  .footer-inner-container {
+    position: relative;
+    @include styles.flexCenter(flex-start, row);
+    max-width: 1092px;
+    width: 80vw;
+    height: 100%;
+    .footer {
+      position: relative;
+      @include styles.flexCenter(flex-start, row);
+      max-width: 930px;
+      width: 70vw;
+      height: 100%;
+      overflow: hidden;
+      background-color: styles.$very-light-grey;
+      z-index: 0;
+      .logo-block {
+        position: relative;
+        @include styles.flexCenter(center, row);
+        height: 200px;
+        width: 200px;
+        background-color: styles.$very-dark-blue;
+        cursor: pointer;
+        .logo {
+          width: 65px;
+          height: auto;
+        }
+      }
+      .link-buttons-container {
+        @include styles.flexCenter(space-between, row);
+        width: 100%;
+        height: 100%;
+        margin: 0px 0px 0px 0px;
+        .footer-links-container {
+          @include styles.flexCenter(center, row);
+          .nav-link {
+            font-size: 10px;
+            color: styles.$medium-grey;
+            margin: 0px 0px 0px 50px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    @include styles.button(absolute, 49px, 3vw, 0);
+  }
+}

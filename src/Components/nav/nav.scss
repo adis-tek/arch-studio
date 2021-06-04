@@ -1,0 +1,42 @@
+@use '../../styles';
+
+.nav-container {
+  @include styles.flexCenter(center, row);
+  margin: 30px 0px 30px 0px;
+  width: 100vw;
+  .nav {
+    @include styles.flexCenter(flex-start, row);
+    max-width: 1092px;
+    width: 80vw;
+    @media screen and (max-width: styles.$screen-md-max) {
+      justify-content: space-between;
+    }
+    .nav-logo {
+      width: 96px;
+      height: 40px;
+      margin: 0px 75px 0px 0px;
+      @media screen and (max-width: styles.$screen-sm-max) {
+        width: 77px;
+        height: 32px;
+      }
+    }
+    .nav-link {
+      color: styles.$dark-grey;
+      font-size: 12px;
+      margin: 0px 30px 0px 30px;
+      &:hover {
+        color: styles.$very-dark-blue;
+        cursor: pointer;
+      }
+      @media screen and (max-width: styles.$screen-md-max) {
+        display: none;
+      }
+    }
+    .nav-mobile-icon {
+      display: none;
+      @media screen and (max-width: styles.$screen-md-max) {
+        display: flex;
+      }
+    }
+  }
+}
