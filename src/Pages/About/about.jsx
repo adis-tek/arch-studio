@@ -29,9 +29,9 @@ function about() {
 
      <div className="container">
         <div className="hero-container">
+        <h1 className="about">About</h1>
             <img className="hero-image" src={Hero} />
             <div className="hero-text-container">
-            <h1 className="about">About</h1>
                 <div className="hero-inner-text-container">
                 <img className="header-line" src={HeaderLine} />
                 <h2 className="h2">Your team of professionals</h2>
