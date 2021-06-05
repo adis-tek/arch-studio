@@ -121,9 +121,37 @@
             position: relative;
             @include styles.flexCenter(center, column);
             margin: 0px 0px 0px 25px;
-            .architect-profile {
+            .architect-profile-jake {
+              position: relative;
+              @include styles.flexCenter(center, row);
               width: 350px;
               height: 320px;
+              background-image: url(../../Assets/about/desktop/avatar-jake.jpg);
+              &:hover {
+                filter: brightness(60%);
+                .linkedin {
+                  display: block;
+                }
+                .twitter {
+                  display: block;
+                }
+              }
+            }
+            .linkedin {
+              display: none;
+              position: relative;
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+              margin: 0px 20px 0px 0px;
+            }
+            .twitter {
+              display: none;
+              position: relative;
+              width: 35px;
+              height: 35px;
+              object-fit: cover;
+              margin: 0;
             }
             .description {
               width: 100%;

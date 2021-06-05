@@ -4,6 +4,10 @@ import PageLine from '../../Assets/icons/page-line.png';
 import Hero from '../../Assets/about/desktop/image-hero.jpg';
 import Heritage from '../../Assets/about/desktop/image-heritage.jpg';
 import HeaderLine from '../../Assets/icons/header-line.svg';
+import LinkedIn from '../../Assets/icons/icon-linkedin.svg';
+import TwitterWhite from '../../Assets/icons/icon-twitter-white.svg';
+import LinkedInWhite from '../../Assets/icons/icon-linkedin-white.svg';
+import Twitter from '../../Assets/icons/icon-twitter.svg';
 import Jake from '../../Assets/about/desktop/avatar-jake.jpg';
 import Thompson from '../../Assets/about/desktop/avatar-thompson.jpg';
 import Jackson from '../../Assets/about/desktop/avatar-jackson.jpg';
@@ -65,7 +69,10 @@ function about() {
         <div className="quad-container">
 
         <div className="couple-container">
-        <img className="architect-profile" src={Jake} />
+        <div className="architect-profile-jake">
+        <img className="linkedin" src={LinkedInWhite} />
+        <img className="twitter" src={TwitterWhite} />
+        </div>
         <div className="description">
         <p className="name">Jake Richards</p>
         <p className="title">Chief Architect</p>
@@ -73,7 +80,10 @@ function about() {
 
         <div className="spacing" />
 
-        <img className="architect-profile" src={Thompson} />
+        <div className="architect-profile-thompson">
+        <img className="linkedin" src={LinkedInWhite} />
+        <img className="twitter" src={TwitterWhite} />
+        </div>
         <div className="description">
         <p className="name">Thompson Smith</p>
         <p className="title">Head of Finance</p>
@@ -81,7 +91,10 @@ function about() {
         </div>
 
         <div className="couple-container">
-        <img className="architect-profile" src={Jackson} />
+        <div className="architect-profile-jackson">
+        <img className="linkedin" src={LinkedInWhite} />
+        <img className="twitter" src={TwitterWhite} />
+        </div>
         <div className="description">
         <p className="name">Jackson Rourke</p>
         <p className="title">Lead Designer</p>
@@ -89,7 +102,10 @@ function about() {
 
         <div className="spacing" />
 
-        <img className="architect-profile" src={Maria} />
+        <div className="architect-profile-maria">
+        <img className="linkedin" src={LinkedInWhite} />
+        <img className="twitter" src={TwitterWhite} />
+        </div>
         <div className="description">
         <p className="name">Maria Simpson</p>
         <p className="title">Senior Architect</p>
