@@ -90,9 +90,9 @@ function contact() {
                 <label className="name-label"></label><br></br>
                 <input className="name-input" type="text" name="name" placeholder="Name"></input><br></br>
                 <label className="email-label"></label><br></br>
-                <input className="email-input" type="text" name="name" placeholder="Email"></input><br></br>
+                <input className="email-input" type="text" name="email" placeholder="Email"></input><br></br>
                 <label className="message-label"></label><br></br>
-                <input className="message-input" type="text" name="name" placeholder="Message"></input><br></br>
+                <input className="message-input" type="text" name="text" placeholder="Message"></input><br></br>
                 <div className="form-button-container">
                 <button className="button">
                     <img className="button-arrow" src={Arrow} />

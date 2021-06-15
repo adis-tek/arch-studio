@@ -260,9 +260,6 @@
             ::placeholder {
               font-weight: 700;
             }
-            &:hover {
-              border-bottom: 3px styles.$very-dark-blue solid;
-            }
             &:active {
               border-bottom: 3px styles.$very-dark-blue solid;
             }
@@ -278,9 +275,6 @@
             ::placeholder {
               font-weight: 700;
             }
-            &:hover {
-              border-bottom: 3px styles.$very-dark-blue solid;
-            }
             &:active {
               border-bottom: 3px styles.$very-dark-blue solid;
             }
@@ -294,9 +288,6 @@
             width: 100%;
             ::-webkit-placeholder {
               font-weight: 700;
-            }
-            &:hover {
-              border-bottom: 3px styles.$very-dark-blue solid;
             }
             &:active {
               border-bottom: 3px styles.$very-dark-blue solid;

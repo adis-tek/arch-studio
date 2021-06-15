@@ -7,6 +7,7 @@ import Home from './Pages/Home/home.jsx';
 import Portfolio from './Pages/Portfolio/portfolio.jsx';
 import About from './Pages/About/about.jsx';
 import Contact from './Pages/Contact/contact.jsx';
+import Slider from './Components/slider/ImageSlider.jsx';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/portfolio" component={Portfolio} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/slider" component={Slider} />
         </Switch>
         <Footer />
     </div>

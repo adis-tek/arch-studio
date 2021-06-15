@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import PageLine from '../../Assets/icons/page-line.png';
 import FooterArrow from '../../Assets/icons/icon-arrow.svg';
 import WelcomeImage from '../../Assets/home/desktop/image-welcome.jpg';
+import Slider from '../../Components/slider/ImageSlider';
+import { ImageSliderData } from '../../Components/slider/ImageSliderData';
 
 function home() {
   return (
@@ -19,7 +21,7 @@ function home() {
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
   <title>Frontend Mentor | Arch Studio Website Challenge</title>
   </head>
-
+  <Slider slides={ImageSliderData} />
   <body className="home-body">
     <div className="container">
 
