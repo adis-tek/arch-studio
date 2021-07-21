@@ -15,7 +15,7 @@ body {
 * {
   font-family: "Spartan", sans-serif;
   margin: 0px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   overflow-x: hidden;
   outline: none;
 }
@@ -66,4 +66,46 @@ input[placeholder="Message"]:placeholder-shown {
 
 input::placeholder {
   color: #c8ccd8;
+}
+
+.error-text::after {
+  position: absolute;
+  content: "Can't be empty";
+  top: 10px;
+  right: 0;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+  padding: 0px 0px 15px 40px;
+  margin: 0px 0px 0px 0px;
+}
+
+input:required:invalid + .error-text::after {
+  position: absolute;
+  content: "Can't be empty";
+  top: 10px;
+  right: 0;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+  padding: 0px 0px 15px 40px;
+  margin: -7px 0px 0px 0px;
+}
+
+input:required:valid + .error-text::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 0;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+  padding: 0px 0px 15px 40px;
+  margin: -7px 0px 0px 0px;
 }
