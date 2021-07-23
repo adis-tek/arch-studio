@@ -45,9 +45,87 @@ a:active {
 .active a {
   text-decoration: underline;
 }
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background: transparent;
+  width: 90%;
+  height: 90px;
+  border-bottom: 1px solid;
+}
+
+/* input:required:valid {
+  border: 1px solid green;
+} */
+/* 
+.error-text::after {
+  position: absolute;
+  content: "this is content";
+  color: black;
+  background-position: right 10px top 3px;
+  margin: -7px 0px 0px 0px;
+  top: 10px;
+  right: 37.5px;
+} */
+
+input:required:valid {
+  color: black;
+  content: "";
+  background-position: right 10px top 3px;
+  margin: -7px 0px 0px 0px;
+  border: 1px solid green;
+}
+
+/* .error-text::after {
+  position: absolute;
+  content: "this is content";
+  background-position: top 10px right 37.5px;
+  top: 10px;
+  right: 37.5px;
+} */
+
+input:required:invalid + .error-text::after {
+  position: absolute;
+  content: "this is content";
+  background-position: top 10px right 37.5px;
+  top: 10px;
+  right: 37.5px;
+  border: 1px solid red;
+}
+
+/* input:required:invalid {
+  border: 1px solid red;
+} */
 
 input {
   border: none;
+  outline: none;
+  border-bottom: 1px rgba(27, 29, 35, 1) solid;
+  width: 100%;
+  margin: 0px 0px 15px 0px;
+}
+
+input::placeholder {
+  font-weight: 700;
+}
+
+input:active {
+  border-bottom: 3px rgba(27, 29, 35, 1) solid;
+}
+
+input:focus {
+  border-bottom: 3px rgba(27, 29, 35, 1) solid;
 }
 
 input:placeholder-shown {
@@ -57,7 +135,7 @@ input:placeholder-shown {
   padding: 5px 0px 25px 40px;
 }
 
-input[placeholder="Message"]:placeholder-shown {
+/* input[placeholder="Message"]:placeholder-shown {
   color: #c8ccd8;
   font-size: 20px;
   font-weight: 700;
@@ -68,10 +146,10 @@ input::placeholder {
   color: #c8ccd8;
 }
 
-.error-text::after {
+.error-text-email::after {
   position: absolute;
   content: "Can't be empty";
-  top: 10px;
+  top: 0px;
   right: 0;
   font-size: 12px;
   line-height: 26px;
@@ -82,7 +160,7 @@ input::placeholder {
   margin: 0px 0px 0px 0px;
 }
 
-input:required:invalid + .error-text::after {
+.error-text-name::after {
   position: absolute;
   content: "Can't be empty";
   top: 10px;
@@ -96,7 +174,7 @@ input:required:invalid + .error-text::after {
   margin: -7px 0px 0px 0px;
 }
 
-input:required:valid + .error-text::after {
+.valid-text-name::after {
   position: absolute;
   content: "";
   top: 10px;
@@ -109,3 +187,59 @@ input:required:valid + .error-text::after {
   padding: 0px 0px 15px 40px;
   margin: -7px 0px 0px 0px;
 }
+
+.error-text-email::after {
+  position: absolute;
+  content: "Can't be empty";
+  top: 10px;
+  right: 0;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+  padding: 0px 0px 15px 40px;
+  margin: -7px 0px 0px 0px;
+}
+
+.valid-text-email::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 0;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+  padding: 0px 0px 15px 40px;
+  margin: -7px 0px 0px 0px;
+}
+
+.error-text-message::after {
+  position: absolute;
+  content: "Can't be empty";
+  top: 10px;
+  right: 0;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+  padding: 0px 0px 15px 40px;
+  margin: -7px 0px 0px 0px;
+}
+
+.valid-text-message::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 0;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+  padding: 0px 0px 15px 40px;
+  margin: -7px 0px 0px 0px;
+} */

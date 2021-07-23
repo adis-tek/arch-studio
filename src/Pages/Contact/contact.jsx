@@ -8,41 +8,26 @@ import Arrow from '../../Assets/icons/icon-arrow.svg';
 import MapImage from '../../Assets/contact/desktop/image-map.png';
 
 function Contact() {
-    const [errorTextName, setErrorTextName] = useState("error-text-initialized");
-    const [errorTextEmail, setErrorTextEmail] = useState("error-text-initialized");
-    const [errorTextPhone, setErrorTextPhone] = useState("error-text-initialized");
-    const [errorTextMessage, setErrorTextMessage] = useState("error-text-initialized");
-    {/* */}
-    const [inputName, setInputName] = useState("input-initialized");
-    const [inputEmail, setInputEmail] = useState("input-initialized");
-    const [inputPhone, setInputPhone] = useState("input-initialized");
-    const [inputMessage, setInputMessage] = useState("input-initialized");
+    const [errorTextName, setErrorTextName] = useState("");
+    const [errorTextEmail, setErrorTextEmail] = useState("");
+    const [errorTextMessage, setErrorTextMessage] = useState("");
     {/* */}
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
     const [text, setText] = useState("");
     {/* */}
     const [formSuccess, setFormSuccess] = useState("");
 
     const toggleNameError = () => {
         setErrorTextName("error-text");
-        setInputName("input-error");
     }
 
     const toggleEmailError = () => {
         setErrorTextEmail("error-text");
-        setInputEmail("input-error");
-    }
-
-    const togglePhoneError = () => {
-        setErrorTextPhone("error-text");
-        setInputPhone("input-error");
     }
 
     const toggleMessageError = () => {
-        setErrorTextMessage("error-text-message");
-        setInputMessage("input-error");
+        setErrorTextMessage("error-text");
     }
 
     const isEmail = (email) => {
@@ -59,7 +44,6 @@ function Contact() {
         } else if (name.trim().length < 3){
             console.log("name is too short")
             setErrorTextName("name-format-error");
-            setInputName("name-format-error-sign");
         } else {
             formChecks++;
         }
@@ -68,16 +52,6 @@ function Contact() {
         } else if (isEmail(email) === false) {
             console.log("invalid email format")
             setErrorTextEmail("email-format-error");
-            setInputEmail("input-error");
-        } else {
-            formChecks++;
-        }
-        if (phone === "") {
-            console.log("Phone Error");
-        } else if (phone.trim().length < 10){
-            console.log("phone number is invalid")
-            setErrorTextPhone("phone-format-error");
-            setInputPhone("input-error");
         } else {
             formChecks++;
         }
@@ -92,7 +66,6 @@ function Contact() {
             {
                 Name: {name},
                 Email: {email},
-                Phone: {phone},
                 Text: {text},
             })
             setFormSuccess("Your message was sent successfully! We'll get back to you soon.")
@@ -104,6 +77,31 @@ function Contact() {
         e.preventDefault();
         const isValid = checkInputs();
     }
+
+    // useEffect(() => {
+    //     if (name === "") {
+    //         setErrorTextName("error-text-name");
+    //     } else {
+    //         setErrorTextName("valid-text-name");
+    //     }
+    // }, [name]);
+
+    // useEffect(() => {
+    //     if (email === "") {
+    //         setErrorTextEmail("error-text-email");
+    //     } else {
+    //         setErrorTextEmail("valid-text-email");
+    //     }
+    // }, [email]);
+
+    // useEffect(() => {
+    //     if (text === "") {
+    //         setErrorTextMessage("error-text-message1");
+    //     } else {
+    //         setErrorTextMessage("valid-text-message");
+    //     }
+    // }, [text]);
+
     return (
     <>
     <div className="page-header-faded">
@@ -183,15 +181,18 @@ function Contact() {
                     </div>
             </div>
             <form className="form" onSubmit={onSubmit}>
-                <label className="name-label"></label><br></br>
-                <input className="name-input" type="text" name="name" placeholder="Name" required onClick={toggleNameError}></input><br></br>
-                <span class={errorTextName}></span>
-                <label className="email-label"></label><br></br>
-                <input className={inputEmail} type="text" name="email" placeholder="Email" required onClick={toggleEmailError}></input><br></br>
+                <div className="input-container">
+                <input className="name-input" type="text" name="name" placeholder="Name" required onChange={(e) => {setName(e.target.value)}} onClick={toggleNameError}></input><br></br>
+                <span class={errorTextName}>SPAN</span>
+                </div>
+                <div className="input-container">
+                <input className="email-input" type="text" name="email" placeholder="Email" required onChange={(e) => {setEmail(e.target.value)}} onClick={toggleEmailError}></input><br></br>
                 <span class={errorTextEmail}></span>
-                <label className="message-label"></label><br></br>
-                <input className={inputMessage} type="text" name="text" required onClick={toggleMessageError} placeholder="Message"></input><br></br>
+                </div>
+                <div className="input-container">
+                <input className="message-input" type="text" name="text" placeholder="Message" required onChange={(e) => {setText(e.target.value)}} onClick={toggleMessageError}></input><br></br>
                 <span class={errorTextMessage}></span>
+                </div>
                 <div className="form-button-container">
                 <button className="button">
                     <img className="button-arrow" src={Arrow} />
