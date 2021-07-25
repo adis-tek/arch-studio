@@ -121,6 +121,10 @@ input::placeholder {
   font-weight: 700;
 }
 
+textarea::placeholder {
+  font-weight: 700;
+}
+
 input:active {
   border-bottom: 3px rgba(27, 29, 35, 1) solid;
 }
