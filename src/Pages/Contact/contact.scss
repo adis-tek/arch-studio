@@ -6,6 +6,7 @@
   position: relative;
   @include styles.flexCenter(center, column);
   width: 100vw;
+  overflow: hidden;
   .contact-body {
     @include styles.flexCenter(flex-start, column);
     .container {
@@ -221,7 +222,7 @@
       .contact-form-container {
         @include styles.flexCenter(space-between, row);
         width: 100%;
-        height: 400px;
+        height: 570px;
         margin: 100px 0px 150px 0px;
         .contact-form-section {
           position: relative;
@@ -250,6 +251,7 @@
           width: 100%;
           height: 100%;
           margin: 0px 0px 0px 50px;
+          overflow: hidden;
           .input-initialized .error-text-initialized {
             display: none;
           }

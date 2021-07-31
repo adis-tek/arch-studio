@@ -109,14 +109,6 @@ function Contact() {
     <h1 className="current-page">CONTACT</h1>
   </div>
 <div className="contact-main"> 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
-  
-  <title>Frontend Mentor | Arch Studio Website Challenge</title>
-</head>
     <body className="contact-body">
 
         <div className="container">
