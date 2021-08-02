@@ -44,10 +44,9 @@ a:active {
   flex-direction: column;
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 
-input {
+.input-initialized {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -68,16 +67,6 @@ input {
 /* input:required:valid {
   border: 1px solid green;
 } */
-/* 
-.error-text::after {
-  position: absolute;
-  content: "this is content";
-  color: black;
-  background-position: right 10px top 3px;
-  margin: -7px 0px 0px 0px;
-  top: 10px;
-  right: 37.5px;
-} */
 
 /* .error-text::after {
   position: absolute;
@@ -91,7 +80,102 @@ input {
   border: 1px solid red;
 } */
 
-input:required:valid {
+.input-initialized:required:valid {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  content: "";
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background: transparent;
+  width: 90%;
+  height: 90px;
+  border-bottom: 1px solid;
+  border: none;
+  outline: none;
+  border-bottom: 1px rgba(27, 29, 35, 1) solid;
+  width: 100%;
+  margin: 0px 0px 15px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 0px 25px 40px;
+}
+
+.input-initialized:required:valid:focus {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  content: "";
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background: transparent;
+  width: 90%;
+  height: 90px;
+  border-bottom: 1px solid;
+  border: none;
+  outline: none;
+  border-bottom: 3px rgba(27, 29, 35, 1) solid;
+  width: 100%;
+  margin: 0px 0px 15px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 0px 25px 40px;
+}
+
+.input-initialized::placeholder {
+  font-weight: 700;
+}
+
+.textarea-initialized::placeholder {
+  font-weight: 700;
+}
+
+.input-initialized:active {
+  border-bottom: 3px rgba(27, 29, 35, 1) solid;
+}
+
+.input-initialized:focus {
+  border-bottom: 3px rgba(27, 29, 35, 1) solid;
+}
+
+.input-initialized:placeholder-shown {
+  color: #c8ccd8;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 0px 25px 40px;
+}
+
+/* Text area */
+
+.message-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.textarea-initialized {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background: transparent;
+  width: 90%;
+  height: 90px;
+  border-bottom: 1px solid;
+  border: none;
+  outline: none;
+  border-bottom: 1px rgba(27, 29, 35, 1) solid;
+  width: 100%;
+  margin: 0px 0px 15px 0px;
+}
+
+.textarea-initialized:required:valid {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -112,134 +196,428 @@ input:required:valid {
   padding: 5px 0px 25px 40px;
 }
 
-input::placeholder {
+.textarea-initialized::placeholder {
   font-weight: 700;
 }
 
-textarea::placeholder {
-  font-weight: 700;
-}
-
-input:active {
+.textarea-initialized:active {
   border-bottom: 3px rgba(27, 29, 35, 1) solid;
 }
 
-input:focus {
+.textarea-initialized:focus {
   border-bottom: 3px rgba(27, 29, 35, 1) solid;
 }
 
-input:placeholder-shown {
+.textarea-initialized:placeholder-shown {
   color: #c8ccd8;
   font-size: 20px;
   font-weight: 700;
   padding: 5px 0px 25px 40px;
 }
 
-/* input[placeholder="Message"]:placeholder-shown {
-  color: #c8ccd8;
-  font-size: 20px;
-  font-weight: 700;
-  padding: 0px 0px 75px 40px;
-}
-
-input::placeholder {
-  color: #c8ccd8;
-}
-
-.error-text-email::after {
-  position: absolute;
-  content: "Can't be empty";
-  top: 0px;
-  right: 0;
-  font-size: 12px;
-  line-height: 26px;
-  font-weight: 400;
-  color: black;
-  font-style: italic;
-  padding: 0px 0px 15px 40px;
-  margin: 0px 0px 0px 0px;
-}
+/*  Error messages */
 
 .error-text-name::after {
   position: absolute;
   content: "Can't be empty";
-  top: 10px;
-  right: 0;
-  font-size: 12px;
-  line-height: 26px;
-  font-weight: 400;
-  color: black;
-  font-style: italic;
-  padding: 0px 0px 15px 40px;
+  color: #df5656;
+  font-size: 15px;
+  background-position: right 10px top 3px;
   margin: -7px 0px 0px 0px;
+  top: 90px;
+  right: 37.5px;
 }
 
-.valid-text-name::after {
+.name-error::after {
   position: absolute;
-  content: "";
-  top: 10px;
-  right: 0;
-  font-size: 12px;
-  line-height: 26px;
-  font-weight: 400;
-  color: black;
-  font-style: italic;
-  padding: 0px 0px 15px 40px;
+  content: "Too Short";
+  color: #df5656;
+  font-size: 15px;
+  background-position: right 10px top 3px;
   margin: -7px 0px 0px 0px;
+  top: 90px;
+  right: 37.5px;
 }
 
 .error-text-email::after {
   position: absolute;
   content: "Can't be empty";
-  top: 10px;
-  right: 0;
-  font-size: 12px;
-  line-height: 26px;
-  font-weight: 400;
-  color: black;
-  font-style: italic;
-  padding: 0px 0px 15px 40px;
+  color: #df5656;
+  font-size: 15px;
+  background-position: right 10px top 3px;
   margin: -7px 0px 0px 0px;
+  top: 90px;
+  right: 37.5px;
 }
 
-.valid-text-email::after {
+.email-error::after {
   position: absolute;
-  content: "";
-  top: 10px;
-  right: 0;
-  font-size: 12px;
-  line-height: 26px;
-  font-weight: 400;
-  color: black;
-  font-style: italic;
-  padding: 0px 0px 15px 40px;
+  content: "Wrong format";
+  color: #df5656;
+  font-size: 15px;
+  background-position: right 10px top 3px;
   margin: -7px 0px 0px 0px;
+  top: 90px;
+  right: 37.5px;
 }
 
 .error-text-message::after {
   position: absolute;
   content: "Can't be empty";
-  top: 10px;
-  right: 0;
-  font-size: 12px;
-  line-height: 26px;
-  font-weight: 400;
-  color: black;
-  font-style: italic;
-  padding: 0px 0px 15px 40px;
+  color: #df5656;
+  font-size: 15px;
+  background-position: right 10px top 3px;
   margin: -7px 0px 0px 0px;
+  top: 90px;
+  right: 37.5px;
 }
 
-.valid-text-message::after {
+.name-input-error {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background: transparent;
+  width: 90%;
+  height: 90px;
+  border-bottom: 1px solid;
+  border: none;
+  outline: none;
+  border-bottom: 1px #df5656 solid;
+  width: 100%;
+  margin: 0px 0px 15px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 0px 25px 40px;
+}
+
+.name-input-error:focus {
+  border-bottom: 3px #df5656 solid;
+}
+
+.name-input-error::placeholder {
+  color: #df5656;
+}
+
+.email-input-error {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background: transparent;
+  width: 90%;
+  height: 90px;
+  border-bottom: 1px solid;
+  border: none;
+  outline: none;
+  border-bottom: 1px #df5656 solid;
+  width: 100%;
+  margin: 0px 0px 15px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 0px 25px 40px;
+}
+
+.email-input-error:focus {
+  border-bottom: 3px #df5656 solid;
+}
+
+.email-input-error::placeholder {
+  color: #df5656;
+}
+
+.message-input-error {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background: transparent;
+  width: 90%;
+  height: 90px;
+  border-bottom: 1px solid;
+  border: none;
+  outline: none;
+  border-bottom: 1px #df5656 solid;
+  width: 100%;
+  margin: 0px 0px 15px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 0px 25px 40px;
+}
+
+.message-input-error:focus {
+  border-bottom: 3px #df5656 solid;
+}
+
+.message-input-error::placeholder {
+  color: #df5656;
+}
+
+/* Slider */
+
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1260px;
+  min-width: 1100px;
+  height: 680px;
+  overflow: hidden;
+}
+
+.image {
+  position: relative;
+  display: flex;
+  width: 1020px;
+  height: 600px;
+  object-fit: cover;
+  filter: brightness(75%);
+}
+
+.slide-button-one {
   position: absolute;
-  content: "";
-  top: 10px;
-  right: 0;
-  font-size: 12px;
-  line-height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 88%;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+  color: #1b1d23;
+  background-color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slide-button-two {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 88%;
+  left: 80px;
+  width: 80px;
+  height: 80px;
+  color: #1b1d23;
+  background-color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slide-button-three {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 88%;
+  left: 160px;
+  width: 80px;
+  height: 80px;
+  color: #1b1d23;
+  background-color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slide-button-four {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 88%;
+  left: 240px;
+  width: 80px;
+  height: 80px;
+  color: #1b1d23;
+  background-color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slide-button-one.active {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 88%;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  background-color: #1b1d23;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slide-button-two.active {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 88%;
+  left: 80px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  background-color: #1b1d23;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slide-button-three.active {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 88%;
+  left: 160px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  background-color: #1b1d23;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slide-button-four.active {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 88%;
+  left: 240px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  background-color: #1b1d23;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slide-info-one {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+  height: 50%;
+  z-index: 10;
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+.slide-info-one.off {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide-info-two {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 10;
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+.slide-info-two.off {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide-info-three {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 10;
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+.slide-info-three.off {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide-info-four {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 10;
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+.slide-info-four.off {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide-header {
+  position: relative;
+  display: flex;
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  line-height: 86.25px;
+  margin: 0px 0px 20px 0px;
+  overflow: hidden;
+}
+
+.slide-paragraph {
+  position: relative;
+  display: flex;
+  font-size: 15px;
   font-weight: 400;
-  color: black;
-  font-style: italic;
-  padding: 0px 0px 15px 40px;
-  margin: -7px 0px 0px 0px;
-} */
+  color: white;
+  width: 60%;
+  line-height: 23.25px;
+  margin: 0px 0px 20px 0px;
+}
+
+.slide {
+  position: relative;
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}

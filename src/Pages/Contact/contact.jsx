@@ -8,9 +8,15 @@ import Arrow from '../../Assets/icons/icon-arrow.svg';
 import MapImage from '../../Assets/contact/desktop/image-map.png';
 
 function Contact() {
+    const [nameInitialized, setNameInitialized] = useState(0);
+    const [emailInitialized, setEmailInitialized] = useState(0);
     const [errorTextName, setErrorTextName] = useState("");
     const [errorTextEmail, setErrorTextEmail] = useState("");
     const [errorTextMessage, setErrorTextMessage] = useState("");
+    {/* */}
+    const [nameInput, setNameInput] = useState("input-initialized");
+    const [emailInput, setEmailInput] = useState("input-initialized");
+    const [messageInput, setMessageInput] = useState("textarea-initialized");
     {/* */}
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -19,21 +25,72 @@ function Contact() {
     const [formSuccess, setFormSuccess] = useState("");
 
     const toggleNameError = () => {
-        setErrorTextName("error-text");
+        if (name === "" && nameInitialized > 0) {
+            setErrorTextName("error-text-name");
+            setNameInput("name-input-error");
+        }
     }
+
+    useEffect(() => {
+        setNameInput("input-initialized");
+        setEmailInput("email-initialized");
+    }, [])
+
+    useEffect(() => {
+        setNameInitialized(1);
+        if (name === "" && nameInitialized < 0) {
+            console.log("name empty");
+        } else if (name.trim().length < 3 && nameInitialized > 0) {
+            setErrorTextName("name-error");
+            setNameInput("name-input-error");
+        } else if (name === "" && nameInitialized > 0) {
+            setErrorTextName("error-text-name");
+        } else if (name.length > 0) {
+            setErrorTextName("");
+            setNameInput("input-initialized");
+        } else {
+            setNameInput("input-initialized");
+        }
+    }, [name]);
+
 
     const toggleEmailError = () => {
-        setErrorTextEmail("error-text");
+        if (email === "" && emailInitialized > 0) {
+            setErrorTextName("error-text-email");
+            setNameInput("email-input-error");
+        }
+        setEmailInput("email-input-error");
+        setErrorTextEmail("error-text-email");
     }
 
+    useEffect(() => {
+        setEmailInitialized(1);
+        if (name === "" && emailInitialized < 0) {
+            console.log("email empty");
+        } else if (isEmail(email) == false && emailInitialized > 0) {
+            setErrorTextName("email-error");
+            setNameInput("email-input-error");
+        } else if (name === "" && emailInitialized > 0) {
+            setErrorTextName("error-text-email");
+        } else if (name.length > 0) {
+            setErrorTextName("");
+            setNameInput("email-initialized");
+        } else {
+            setNameInput("email-initialized");
+        }
+    }, [email]);
+
     const toggleMessageError = () => {
-        setErrorTextMessage("error-text");
+        setMessageInput("message-input-error");
+        setErrorTextMessage("error-text-message");
     }
 
     const isEmail = (email) => {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
     }
 
+    console.log(nameInitialized);
+    console.log(emailInitialized);
 
     const checkInputs = (e) => { 
         let formChecks = 0;
@@ -174,15 +231,15 @@ function Contact() {
             </div>
             <form className="form" onSubmit={onSubmit}>
                 <div className="input-container">
-                <input className="name-input" type="text" name="name" placeholder="Name" required onChange={(e) => {setName(e.target.value)}} onClick={toggleNameError}></input><br></br>
-                <span class={errorTextName}>SPAN</span>
+                <input className={nameInput} type="text" name="name" placeholder="Name" required onChange={(e) => {setName(e.target.value)}} onClick={toggleNameError}></input><br></br>
+                <span class={errorTextName}></span>
                 </div>
                 <div className="input-container">
-                <input className="email-input" type="text" name="email" placeholder="Email" required onChange={(e) => {setEmail(e.target.value)}} onClick={toggleEmailError}></input><br></br>
+                <input className={emailInput} type="text" name="email" placeholder="Email" required onChange={(e) => {setEmail(e.target.value)}} onClick={toggleEmailError}></input><br></br>
                 <span class={errorTextEmail}></span>
                 </div>
                 <div className="input-container">
-                <input className="message-input" type="text" name="text" placeholder="Message" required onChange={(e) => {setText(e.target.value)}} onClick={toggleMessageError}></input><br></br>
+                <textarea className={messageInput} type="text" name="text" placeholder="Message" required onChange={(e) => {setText(e.target.value)}} onClick={toggleMessageError}></textarea><br></br>
                 <span class={errorTextMessage}></span>
                 </div>
                 <div className="form-button-container">
