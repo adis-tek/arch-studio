@@ -36,7 +36,7 @@
         .h1-large {
           position: absolute;
           color: styles.$very-light-grey;
-          margin: 0px 0px 0px 100px;
+          margin: 0px 0px 0px 0px;
           top: 0;
           left: 0;
           font-size: 12vw;
@@ -58,6 +58,7 @@
               line-height: 56px;
               color: styles.$very-dark-blue;
               margin: 0px 0px 40px 0px;
+              overflow: hidden;
             }
             .p-body {
               font-size: 15px;

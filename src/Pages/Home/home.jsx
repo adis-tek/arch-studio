@@ -25,65 +25,6 @@ function home() {
   <body className="home-body">
     <div className="container">
 
-    <div className="home-slide">
-    <h1 className="h1-small">Project Paramour</h1>
-
-    <p className="p-body">Project made for an art museum near Southwest London. Project Paramour is 
-    a statement of bold, modern architecture.</p>
-
-    <button className="button">
-      <NavLink exact activeClassName="active" to="/portfolio">
-          <p className="button-text">See Our Portfolio</p>
-      </NavLink>
-          <img className="button-arrow" src={FooterArrow} />
-    </button>
-
-    <h1 className="h1-small">Seraph Station</h1>
-
-    <p className="p-body">The Seraph Station project challenged us to design a unique station that would 
-    transport people through time. The result is a fresh and futuristic model 
-    inspired by space stations.</p>
-
-    <button className="button">
-      <NavLink exact activeClassName="active" to="/portfolio">
-          <p className="button-text">See Our Portfolio</p>
-      </NavLink>
-          <img className="button-arrow" src={FooterArrow} />
-    </button>
-
-    <h1 className="h1-small">Federal II Tower</h1>
-
-    <p className="p-body">A sequel theme project for a tower originally built in the 1800s. We achieved 
-    this with a striking look of brutal minimalism with modern touches.</p>
-    
-    <button className="button">
-      <NavLink exact activeClassName="active" to="/portfolio">
-          <p className="button-text">See Our Portfolio</p>
-      </NavLink>
-          <img className="button-arrow" src={FooterArrow} />
-    </button>
-
-    <h1 className="h1-small">Trinity Bank Tower</h1>
-
-    <p className="p-body">Trinity Bank challenged us to make a concept for a 84 story building located 
-    in the middle of a city with a high earthquake frequency. For this project we 
-    used curves to blend design and stability to meet our objectives.</p>
-
-    <button className="button">
-      <NavLink exact activeClassName="active" to="/portfolio">
-          <p className="button-text">See Our Portfolio</p>
-      </NavLink>
-          <img className="button-arrow" src={FooterArrow} />
-    </button>
-
-<div className="slide-nav-container">
-    <button className="slide-nav-block">01</button>
-    <button className="slide-nav-block">02</button>
-    <button className="slide-nav-block">03</button>
-    <button className="slide-nav-block">04</button>
-</div>
-</div>
-
   <div className="welcome">
   <h1 className="h1-large">Welcome</h1>
       <div className="welcome-text-image-container">
