@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './image-slider.scss';
+import { NavLink } from 'react-router-dom';
 import { ImageSliderData } from './ImageSliderData.js';
 import FooterArrow from '../../Assets/icons/icon-arrow.svg';
+import paramourTablet from '../../Assets/home/tablet/image-hero-paramour.jpg';
+import paramourMobile from '../../Assets/home/mobile/image-hero-paramour.jpg';
 
 const ImageSlider = ({ slides }) => {
     const [current, setCurrent] = useState(0);
@@ -44,10 +47,12 @@ const ImageSlider = ({ slides }) => {
             <div className={current == 0 ? "slide-info" : "slide-info off"} >
                 <h1 className="slide-header">Project <br></br>Paramour</h1>
                 <p className="slide-paragraph">Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.</p>
+                <NavLink to="/portfolio">
                 <button className="slider-button">
                     <p className="slider-button-text">See Our Portfolio</p>
                     <img className="slider-button-arrow" src={FooterArrow} />
-                    </button>
+                </button>
+                </NavLink>
             </div>
             <div className={current == 1 ? "slide-button-two active" : "slide-button-two"} onClick={secondSlide}>2</div>
             <div className={current == 1 ? "slide-info" : "slide-info off"} >
@@ -55,20 +60,24 @@ const ImageSlider = ({ slides }) => {
                 <p className="slide-paragraph">The Seraph Station project challenged us to design a unique station that would 
                 transport people through time. The result is a fresh and futuristic model 
                 inspired by space stations.</p>
+                <NavLink to="/portfolio">
                 <button className="slider-button">
                 <p className="slider-button-text">See Our Portfolio</p>
                 <img className="slider-button-arrow" src={FooterArrow} />
                 </button>
+                </NavLink>
             </div>
             <div className={current == 2 ? "slide-button-three active" : "slide-button-three"} onClick={thirdSlide}>3</div>
             <div className={current == 2 ? "slide-info" : "slide-info off"} >
                 <h1 className="slide-header">Federal II Tower</h1>
                 <p className="slide-paragraph">A sequel theme project for a tower originally built in the 1800s. We achieved 
                 this with a striking look of brutal minimalism with modern touches.</p>
+                <NavLink to="/portfolio">
                 <button className="slider-button">
                 <p className="slider-button-text">See Our Portfolio</p>
                 <img className="slider-button-arrow" src={FooterArrow} />
                 </button>
+                </NavLink>
             </div>
             <div className={current == 3 ? "slide-button-four active" : "slide-button-four"} onClick={fourthSlide}>4</div>
             <div className={current == 3 ? "slide-info" : "slide-info off"} >
@@ -76,10 +85,18 @@ const ImageSlider = ({ slides }) => {
                 <p className="slide-paragraph">Trinity Bank challenged us to make a concept for a 84 story building located 
                 in the middle of a city with a high earthquake frequency. For this project we 
                 used curves to blend design and stability to meet our objectives.</p>
+                <NavLink to="/portfolio">
                 <button className="slider-button">
                 <p className="slider-button-text">See Our Portfolio</p>
                 <img className="slider-button-arrow" src={FooterArrow} />
                 </button>
+                </NavLink>
+            </div>
+            <div className="slide-tablet">
+                <img src={paramourTablet} className="image-tablet" />
+            </div>
+            <div className="slide-mobile">
+                <img src={paramourMobile} className="image-mobile" />
             </div>
         {ImageSliderData.map((slide, index) => {
             return (

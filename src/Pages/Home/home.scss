@@ -7,11 +7,16 @@
   @include styles.flexCenter(center, column);
   width: 100vw;
   .home-body {
+    position: relative;
+    max-width: 1092px;
+    width: 80%;
     @include styles.flexCenter(flex-start, column);
+    @media (max-width: styles.$screen-lg-max) {
+      width: 85%;
+    }
     .container {
       position: relative;
-      max-width: 1092px;
-      width: 80%;
+      width: 100%;
       margin: calc(2vh + 12px) 0px 0px 0px;
       .home-slide {
         max-width: 1110;
@@ -33,14 +38,29 @@
         height: auto;
         margin: 60px 0px 60px 0px;
         @include styles.flexCenter(flex-end, row);
+        @media (min-width: 1400px) {
+          height: 650px;
+        }
+        @media (max-width: styles.$screen-lg-max) {
+          height: 650px;
+          margin: 0px 0px 0px 0px;
+        }
         .h1-large {
           position: absolute;
           color: styles.$very-light-grey;
           margin: 0px 0px 0px 0px;
-          top: 0;
+          top: -30px;
           left: 0;
-          font-size: 12vw;
+          font-size: 13.5vw;
           z-index: 9999;
+          @media (min-width: 1400px) {
+            font-size: 190px;
+            top: -20px;
+          }
+          @media (max-width: styles.$screen-lg-max) {
+            font-size: 17vw;
+            top: 0px;
+          }
         }
         .welcome-text-image-container {
           position: relative;
@@ -48,17 +68,31 @@
           justify-content: flex-end;
           align-items: center;
           height: calc(auto + 200px);
+          @media (max-width: styles.$screen-lg-max) {
+            width: 100%;
+          }
           .welcome-text {
             position: relative;
             @include styles.flexCenter(flex-start, column);
             width: 550px;
             margin: 12vw 50px 0px 0px;
+            @media (max-width: styles.$screen-lg-max) {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              width: 100%;
+              margin: 12vw 0px 0px 0px;
+            }
             .h1-small {
               font-size: 56px;
               line-height: 56px;
               color: styles.$very-dark-blue;
               margin: 0px 0px 40px 0px;
               overflow: hidden;
+              @media (max-width: styles.$screen-lg-max) {
+                width: 80%;
+              }
             }
             .p-body {
               font-size: 15px;
@@ -73,18 +107,24 @@
             height: 530px;
             object-fit: cover;
             margin: 80px 0px 0px 0px;
+            @media (max-width: styles.$screen-lg-max) {
+              display: none;
+            }
           }
         }
       }
       .small-team-container {
         position: relative;
         @include styles.flexCenter(center, column);
-        width: 80vw;
+        width: 100%;
         height: 560px;
         background-image: url(../../Assets/home/desktop/image-small-team.png);
         background-repeat: no-repeat;
         object-fit: cover;
         margin: 200px 0px 200px 0px;
+        @media (max-width: styles.$screen-lg-max) {
+          margin: 0px 0px 85px 0px;
+        }
         .text-button-container {
           width: 65%;
           height: 40%;
@@ -92,7 +132,7 @@
             font-size: 56px;
             line-height: 56px;
             color: white;
-            margin: 0px 0px 40px 0px;
+            margin: 0px 0px 20px 0px;
             padding: 5px 0px;
           }
           @include styles.button(absolute, none, none, 0);
@@ -111,6 +151,14 @@
         position: relative;
         @include styles.flexCenter(space-between, row);
         margin: 0px 0px 200px 0px;
+        @media (max-width: styles.$screen-lg-max) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          margin: 0px 0px 150px 0px;
+        }
         .featured-card-container1 {
           position: relative;
           width: 31%;
@@ -119,6 +167,14 @@
           background-image: url(../../Assets/portfolio/desktop/image-del-sol.jpg);
           object-fit: cover;
           background-repeat: no-repeat;
+          @media (max-width: styles.$screen-lg-max) {
+            width: 100%;
+            height: 240px;
+            margin: 0px 0px 40px 0px;
+            object-fit: cover;
+            background-size: 100% 240px;
+            background-image: url(../../Assets/portfolio/tablet/image-del-sol.jpg);
+          }
           .featured-card-number {
             position: absolute;
             top: 0;
@@ -127,6 +183,9 @@
             width: 65px;
             color: styles.$very-light-grey;
             opacity: 0.6;
+            @media (max-width: styles.$screen-lg-max) {
+              margin: 0px 20px 0px 0px;
+            }
           }
           .featured-text-container {
             position: absolute;
@@ -156,6 +215,14 @@
           background-image: url(../../Assets/portfolio/desktop/image-228b.jpg);
           object-fit: cover;
           background-repeat: no-repeat;
+          @media (max-width: styles.$screen-lg-max) {
+            width: 100%;
+            height: 240px;
+            margin: 0px 0px 40px 0px;
+            object-fit: cover;
+            background-size: 100% 240px;
+            background-image: url(../../Assets/portfolio/tablet/image-228b.jpg);
+          }
           .featured-card-number {
             position: absolute;
             top: 0;
@@ -164,6 +231,9 @@
             width: 130px;
             color: styles.$very-light-grey;
             opacity: 0.6;
+            @media (max-width: styles.$screen-lg-max) {
+              margin: 0px 20px 0px 0px;
+            }
           }
           .featured-text-container {
             position: absolute;
@@ -194,6 +264,14 @@
           background-image: url(../../Assets/portfolio/desktop/image-prototype.jpg);
           object-fit: cover;
           background-repeat: no-repeat;
+          @media (max-width: styles.$screen-lg-max) {
+            width: 100%;
+            height: 240px;
+            margin: 0px 0px 40px 0px;
+            object-fit: cover;
+            background-size: 100% 240px;
+            background-image: url(../../Assets/portfolio/tablet/image-prototype.jpg);
+          }
           .featured-card-number {
             position: absolute;
             top: 0;
@@ -202,6 +280,9 @@
             width: 123px;
             color: styles.$very-light-grey;
             opacity: 0.6;
+            @media (max-width: styles.$screen-lg-max) {
+              margin: 0px 20px 0px 0px;
+            }
           }
           .featured-text-container {
             position: absolute;

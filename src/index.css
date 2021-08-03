@@ -8,7 +8,7 @@ body {
 * {
   font-family: "Spartan", sans-serif;
   margin: 0px;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   overflow-x: hidden;
   outline: none;
 }

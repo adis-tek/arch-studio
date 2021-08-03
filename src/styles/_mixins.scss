@@ -52,6 +52,15 @@
     left: 3.75vw;
     width: 25px;
     height: 100%;
+    @media (max-width: 1025px) {
+      left: 3vw;
+    }
+    @media (max-width: 768px) {
+      left: 3vw;
+    }
+    @media (max-width: 421px) {
+      display: none;
+    }
     .page-line {
       position: relative;
       margin: $margin;

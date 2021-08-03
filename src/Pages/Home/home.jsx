@@ -49,10 +49,12 @@ function home() {
   <div className="small-team-container">
     <div className="text-button-container">
     <h2 className="h2">Small team,<br></br>big ideas</h2>
+    <NavLink to="/about">
     <button className="button">
       <p className="button-text">About Us</p>
       <img className="button-arrow" src={FooterArrow} />
     </button>
+    </NavLink>
     </div>
   </div>
 
