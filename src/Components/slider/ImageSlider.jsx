@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './image-slider.scss';
 import { ImageSliderData } from './ImageSliderData.js';
 import FooterArrow from '../../Assets/icons/icon-arrow.svg';
 
