@@ -12,18 +12,24 @@ function Nav() {
                 <img className="nav-logo" src={Logo} />
                 </NavLink>
                 <img className="nav-mobile-icon" src={NavIcon} />
+                <p className="nav-link">
                 <NavLink activeClassName="active" to="/portfolio">
-                <p className="nav-link">Portfolio</p>
+                    Portfolio
                 </NavLink>
+                    </p>
+                <p className="nav-link">
                 <NavLink activeClassName="active" to="/about">
-                <p className="nav-link">About Us</p>
+                    About Us
                 </NavLink>
+                    </p>
+                <p className="nav-link">
                 <NavLink activeClassName="active" to="/contact">
-                <p className="nav-link">Contact</p>
-                </NavLink>
+                    Contact
+                    </NavLink>
+                    </p>
             </div>
         </div>
-    )
+    ) 
 }
 
 export default Nav
