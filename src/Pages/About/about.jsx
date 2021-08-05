@@ -75,7 +75,7 @@ function about() {
         </div>
         <div className="description">
         <p className="name">Jake Richards</p>
-        <p className="title">Chief Architect</p>
+        <p className="title">Chief Architect</p> 
         </div>
 
         <div className="spacing" />

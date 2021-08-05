@@ -13,6 +13,10 @@
       max-width: 1092px;
       width: 80%;
       margin: calc(2vh + 12px) 0px 0px 0px;
+      @media screen and (max-width: styles.$screen-md-max) {
+        width: 95%;
+        margin: 0px 0px 0px 0px;
+      }
       .hero-container {
         position: relative;
         @include styles.flexCenter(flex-start, row);
@@ -23,11 +27,20 @@
           font-size: 200px;
           z-index: 9999;
           color: styles.$very-light-grey;
+          @media screen and (max-width: styles.$screen-lg-max) {
+            font-size: 23vw;
+          }
+          @media screen and (max-width: styles.$screen-md-max) {
+            display: none;
+          }
         }
         .hero-image {
           width: 635px;
           height: 720px;
           object-fit: cover;
+          @media screen and (max-width: styles.$screen-lg-max) {
+            width: 100%;
+          }
         }
         .hero-text-container {
           position: absolute;
@@ -36,11 +49,20 @@
           background-color: white;
           right: 0;
           bottom: 0;
+          @media screen and (max-width: styles.$screen-lg-max) {
+            width: 90%;
+          }
+          @media screen and (max-width: styles.$screen-md-max) {
+            width: 100%;
+          }
           .hero-inner-text-container {
             position: absolute;
             width: 80%;
             bottom: 0;
             right: 10px;
+            @media screen and (max-width: styles.$screen-md-max) {
+              width: 95%;
+            }
             .header-line {
               margin: 0px 0px 80px 0px;
             }
@@ -67,11 +89,24 @@
         padding: 50px 0px 50px 0px;
         margin: 150px 0px;
         @include styles.flexCenter(space-between, row);
+        @media screen and (max-width: styles.$screen-md-max) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0px 0px;
+          width: 95%;
+        }
         .heritage-text-container {
           position: relative;
           width: 50%;
           height: 100%;
           margin: 0px 50px 0px 0px;
+          @media screen and (max-width: styles.$screen-lg-max) {
+            width: 100%;
+          }
+          @media screen and (max-width: styles.$screen-md-max) {
+            width: 95%;
+          }
           .header-line {
             margin: 0px 0px 50px 0px;
           }
@@ -91,6 +126,11 @@
             margin: 0px 0px 25px 0px;
           }
         }
+        .heritage {
+          @media screen and (max-width: styles.$screen-lg-max) {
+            display: none;
+          }
+        }
       }
       .leaders-container {
         position: relative;
@@ -98,10 +138,18 @@
         width: 100%;
         height: auto;
         margin: 0px 0px 150px 0px;
+        @media screen and (max-width: styles.$screen-lg-max) {
+          flex-direction: column;
+          margin: 0px 0px 0px 0px;
+        }
         .header-container {
           display: flex;
           width: 40%;
           height: 900px;
+          @media screen and (max-width: styles.$screen-lg-max) {
+            width: 100%;
+            height: auto;
+          }
           .h2 {
             font-size: 56px;
             line-height: 56px;
@@ -113,6 +161,9 @@
         .quad-container {
           position: relative;
           @include styles.flexCenter(center, row);
+          @media screen and (max-width: styles.$screen-md-max) {
+            @include styles.flexCenter(center, column);
+          }
           .spacing {
             width: 100%;
             height: 5vh;
@@ -121,12 +172,164 @@
             position: relative;
             @include styles.flexCenter(center, column);
             margin: 0px 0px 0px 25px;
+            @media screen and (max-width: styles.$screen-md-max) {
+              margin: 0px 0px 5vh 0px !important;
+            }
             .architect-profile-jake {
               position: relative;
               @include styles.flexCenter(center, row);
               width: 350px;
               height: 320px;
               background-image: url(../../Assets/about/desktop/avatar-jake.jpg);
+              &:hover {
+                filter: brightness(60%);
+                .linkedin {
+                  display: block;
+                }
+                .twitter {
+                  display: block;
+                }
+              }
+            }
+            .linkedin {
+              display: none;
+              position: relative;
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+              margin: 0px 20px 0px 0px;
+            }
+            .twitter {
+              display: none;
+              position: relative;
+              width: 35px;
+              height: 35px;
+              object-fit: cover;
+              margin: 0;
+            }
+            .description {
+              width: 100%;
+              .name {
+                font-size: 18px;
+                line-height: 25px;
+                color: styles.$very-dark-blue;
+                margin: 15px 0px 0px 0px;
+              }
+              .title {
+                font-size: 15px;
+                line-height: 25px;
+                color: styles.$very-dark-blue;
+                font-weight: 500;
+                margin: 7.5px 0px 0px 0px;
+              }
+            }
+            .architect-profile-thompson {
+              position: relative;
+              @include styles.flexCenter(center, row);
+              width: 350px;
+              height: 320px;
+              background-image: url(../../Assets/about/desktop/avatar-thompson.jpg);
+              &:hover {
+                filter: brightness(60%);
+                .linkedin {
+                  display: block;
+                }
+                .twitter {
+                  display: block;
+                }
+              }
+            }
+            .linkedin {
+              display: none;
+              position: relative;
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+              margin: 0px 20px 0px 0px;
+            }
+            .twitter {
+              display: none;
+              position: relative;
+              width: 35px;
+              height: 35px;
+              object-fit: cover;
+              margin: 0;
+            }
+            .description {
+              width: 100%;
+              .name {
+                font-size: 18px;
+                line-height: 25px;
+                color: styles.$very-dark-blue;
+                margin: 15px 0px 0px 0px;
+              }
+              .title {
+                font-size: 15px;
+                line-height: 25px;
+                color: styles.$very-dark-blue;
+                font-weight: 500;
+                margin: 7.5px 0px 0px 0px;
+              }
+            }
+          }
+          .couple-container {
+            position: relative;
+            @include styles.flexCenter(center, column);
+            margin: 0px 0px 0px 25px;
+            .architect-profile-jackson {
+              position: relative;
+              @include styles.flexCenter(center, row);
+              width: 350px;
+              height: 320px;
+              background-image: url(../../Assets/about/desktop/avatar-jackson.jpg);
+              &:hover {
+                filter: brightness(60%);
+                .linkedin {
+                  display: block;
+                }
+                .twitter {
+                  display: block;
+                }
+              }
+            }
+            .linkedin {
+              display: none;
+              position: relative;
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+              margin: 0px 20px 0px 0px;
+            }
+            .twitter {
+              display: none;
+              position: relative;
+              width: 35px;
+              height: 35px;
+              object-fit: cover;
+              margin: 0;
+            }
+            .description {
+              width: 100%;
+              .name {
+                font-size: 18px;
+                line-height: 25px;
+                color: styles.$very-dark-blue;
+                margin: 15px 0px 0px 0px;
+              }
+              .title {
+                font-size: 15px;
+                line-height: 25px;
+                color: styles.$very-dark-blue;
+                font-weight: 500;
+                margin: 7.5px 0px 0px 0px;
+              }
+            }
+            .architect-profile-maria {
+              position: relative;
+              @include styles.flexCenter(center, row);
+              width: 350px;
+              height: 320px;
+              background-image: url(../../Assets/about/desktop/avatar-maria.jpg);
               &:hover {
                 filter: brightness(60%);
                 .linkedin {
