@@ -112,7 +112,7 @@ function portfolio() {
                 <p className="featured-card-header">Project Paramour</p>
                 <p className="p-body">February 2008</p>
             </div>
-        </div>
+        </div> 
     </div>
 
         </div>

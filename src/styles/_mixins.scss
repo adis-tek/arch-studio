@@ -122,16 +122,21 @@
   }
 }
 
-@mixin portfolioCardDesktop1($name) {
+@mixin portfolioCardDesktop1($screen, $name) {
   .card1 {
     position: relative;
     width: 350px;
     height: 560px;
-    $url: "../Assets/portfolio/desktop/#{$name}.jpg";
-    background-image: url($url);
-    object-fit: cover;
+    $url: "../Assets/portfolio/#{$screen}/#{$name}.jpg";
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url($url);
     background-repeat: no-repeat;
     margin: 0px 40px 0px 0px;
+    background-size: cover;
+    @media screen and (max-width: 1025px) {
+      width: 100%;
+      margin: 0px 0px 40px 0px;
+    }
     &:hover {
       filter: brightness(120%);
     }
@@ -141,11 +146,16 @@
       bottom: 50px;
       color: white;
       margin: 0px 0px 0px 30px;
+      @media screen and (max-width: 768px) {
+        width: 300px;
+      }
+      @media screen and (max-width: 421px) {
+        margin: 0px 0px 0px 15px;
+      }
       .featured-card-header {
-        position: relative;
+        position: absolute;
         font-size: 18px;
         line-height: 25px;
-        position: absolute;
       }
       .p-body {
         position: relative;
@@ -158,16 +168,22 @@
   }
 }
 
-@mixin portfolioCardDesktop2($name) {
+@mixin portfolioCardDesktop2($screen, $name) {
   .card2 {
     position: relative;
     width: 350px;
     height: 560px;
-    $url: "../Assets/portfolio/desktop/#{$name}.jpg";
-    background-image: url($url);
+    $url: "../Assets/portfolio/#{$screen}/#{$name}.jpg";
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url($url);
     object-fit: cover;
     background-repeat: no-repeat;
     margin: 0px 40px 0px 0px;
+    background-size: cover;
+    @media screen and (max-width: 1025px) {
+      width: 100%;
+      margin: 0px 0px 40px 0px;
+    }
     &:hover {
       filter: brightness(120%);
     }
@@ -177,11 +193,16 @@
       bottom: 50px;
       color: white;
       margin: 0px 0px 0px 30px;
+      @media screen and (max-width: 768px) {
+        width: 300px;
+      }
+      @media screen and (max-width: 421px) {
+        margin: 0px 0px 0px 15px;
+      }
       .featured-card-header {
-        position: relative;
+        position: absolute;
         font-size: 18px;
         line-height: 25px;
-        position: absolute;
       }
       .p-body {
         position: relative;
@@ -194,15 +215,22 @@
   }
 }
 
-@mixin portfolioCardDesktop3($name) {
+@mixin portfolioCardDesktop3($screen, $name) {
   .card3 {
     position: relative;
     width: 350px;
     height: 560px;
-    $url: "../Assets/portfolio/desktop/#{$name}.jpg";
-    background-image: url($url);
+    $url: "../Assets/portfolio/#{$screen}/#{$name}.jpg";
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url($url);
     object-fit: cover;
     background-repeat: no-repeat;
+    margin: 0px 40px 0px 0px;
+    background-size: cover;
+    @media screen and (max-width: 1025px) {
+      width: 100%;
+      margin: 0px 0px 40px 0px;
+    }
     &:hover {
       filter: brightness(120%);
     }
@@ -212,6 +240,12 @@
       bottom: 50px;
       color: white;
       margin: 0px 0px 0px 30px;
+      @media screen and (max-width: 768px) {
+        width: 300px;
+      }
+      @media screen and (max-width: 421px) {
+        margin: 0px 0px 0px 15px;
+      }
       .featured-card-header {
         position: relative;
         font-size: 18px;

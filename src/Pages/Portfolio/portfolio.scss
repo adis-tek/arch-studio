@@ -8,43 +8,121 @@
   width: 100vw;
   .portfolio-body {
     @include styles.flexCenter(flex-start, column);
+    @media screen and (max-width: 1025px) {
+      width: 80%;
+      margin: 0px 0px 0px 0px;
+    }
     .container {
       position: relative;
       max-width: 1092px;
       width: 80%;
       margin: calc(2vh + 12px) 0px 0px 0px;
       margin: 0px 0px 150px 0px;
+      @media screen and (max-width: 1025px) {
+        width: 100%;
+      }
       .three-cards-container1 {
         @include styles.flexCenter(space-between, row);
         width: 100%;
         height: 600px;
-        @include styles.portfolioCardDesktop1(image-seraph);
-        @include styles.portfolioCardDesktop2(image-eebox);
-        @include styles.portfolioCardDesktop3(image-federal);
+        @include styles.portfolioCardDesktop1(desktop, image-seraph);
+        @include styles.portfolioCardDesktop2(desktop, image-eebox);
+        @include styles.portfolioCardDesktop3(desktop, image-federal);
+        @media screen and (max-width: styles.$screen-lg-max) {
+          @include styles.portfolioCardDesktop1(tablet, image-seraph);
+          @include styles.portfolioCardDesktop2(tablet, image-eebox);
+          @include styles.portfolioCardDesktop3(tablet, image-federal);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: 800px;
+          object-fit: cover;
+          @media screen and (max-width: styles.$screen-sm-max) {
+            @include styles.portfolioCardDesktop1(mobile, image-seraph);
+            @include styles.portfolioCardDesktop2(mobile, image-eebox);
+            @include styles.portfolioCardDesktop3(mobile, image-federal);
+          }
+        }
       }
       .three-cards-container2 {
         @include styles.flexCenter(space-between, row);
         width: 100%;
         height: 600px;
-        @include styles.portfolioCardDesktop1(image-del-sol);
-        @include styles.portfolioCardDesktop2(image-prototype);
-        @include styles.portfolioCardDesktop3(image-228b);
+        @include styles.portfolioCardDesktop1(desktop, image-del-sol);
+        @include styles.portfolioCardDesktop2(desktop, image-prototype);
+        @include styles.portfolioCardDesktop3(desktop, image-228b);
+        @media screen and (max-width: styles.$screen-lg-max) {
+          @include styles.portfolioCardDesktop1(tablet, image-del-sol);
+          @include styles.portfolioCardDesktop2(tablet, image-prototype);
+          @include styles.portfolioCardDesktop3(tablet, image-228b);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          height: auto;
+          width: 100%;
+          height: 800px;
+          object-fit: cover;
+          @media screen and (max-width: styles.$screen-sm-max) {
+            @include styles.portfolioCardDesktop1(mobile, image-del-sol);
+            @include styles.portfolioCardDesktop2(mobile, image-prototype);
+            @include styles.portfolioCardDesktop3(mobile, image-228b);
+          }
+        }
       }
       .three-cards-container3 {
         @include styles.flexCenter(space-between, row);
         width: 100%;
         height: 600px;
-        @include styles.portfolioCardDesktop1(image-edelweiss);
-        @include styles.portfolioCardDesktop2(image-netcry);
-        @include styles.portfolioCardDesktop3(image-hypers);
+        @include styles.portfolioCardDesktop1(desktop, image-edelweiss);
+        @include styles.portfolioCardDesktop2(desktop, image-netcry);
+        @include styles.portfolioCardDesktop3(desktop, image-hypers);
+        @media screen and (max-width: styles.$screen-lg-max) {
+          @include styles.portfolioCardDesktop1(tablet, image-edelweiss);
+          @include styles.portfolioCardDesktop2(tablet, image-netcry);
+          @include styles.portfolioCardDesktop3(tablet, image-hypers);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          height: auto;
+          width: 100%;
+          height: 800px;
+          object-fit: cover;
+          @media screen and (max-width: styles.$screen-sm-max) {
+            @include styles.portfolioCardDesktop1(mobile, image-edelweiss);
+            @include styles.portfolioCardDesktop2(mobile, image-netcry);
+            @include styles.portfolioCardDesktop3(mobile, image-hypers);
+          }
+        }
       }
       .three-cards-container4 {
         @include styles.flexCenter(space-between, row);
         width: 100%;
         height: 600px;
-        @include styles.portfolioCardDesktop1(image-sxiv);
-        @include styles.portfolioCardDesktop2(image-trinity);
-        @include styles.portfolioCardDesktop3(image-paramour);
+        @include styles.portfolioCardDesktop1(desktop, image-sxiv);
+        @include styles.portfolioCardDesktop2(desktop, image-trinity);
+        @include styles.portfolioCardDesktop3(desktop, image-paramour);
+        @media screen and (max-width: styles.$screen-lg-max) {
+          @include styles.portfolioCardDesktop1(tablet, image-sxiv);
+          @include styles.portfolioCardDesktop2(tablet, image-trinity);
+          @include styles.portfolioCardDesktop3(tablet, image-paramour);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          height: auto;
+          width: 100%;
+          height: 800px;
+          object-fit: cover;
+        }
+        @media screen and (max-width: styles.$screen-sm-max) {
+          @include styles.portfolioCardDesktop1(mobile, image-sxiv);
+          @include styles.portfolioCardDesktop2(mobile, image-trinity);
+          @include styles.portfolioCardDesktop3(mobile, image-paramour);
+        }
       }
     }
   }
