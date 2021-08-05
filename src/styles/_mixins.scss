@@ -21,6 +21,53 @@
     margin: $margin;
     cursor: pointer;
     z-index: 3;
+    @media (max-width: 421px) {
+      width: 187px;
+      height: 72px;
+    }
+    &:hover {
+      background-color: rgba(96, 99, 109, 1);
+    }
+    &:active {
+      background-color: rgba(125, 130, 143, 1);
+    }
+    .button-text {
+      color: white;
+      font-size: 10px;
+      letter-spacing: 0.7px;
+      font-weight: 700;
+      margin: 0px 0px 0px 10px;
+      @media (max-width: 421px) {
+        font-size: 15px;
+      }
+    }
+    .button-arrow {
+      width: 24px;
+      height: 18px;
+      margin: 0px 5px 0px 20px;
+    }
+  }
+}
+
+@mixin featured($position, $top, $right, $margin) {
+  .button {
+    position: $position;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    height: 52px;
+    background-color: rgba(27, 29, 35, 1);
+    padding: 0px 10px 0px 10px;
+    top: $top;
+    right: $right;
+    margin: $margin;
+    cursor: pointer;
+    z-index: 3;
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
     &:hover {
       background-color: rgba(96, 99, 109, 1);
     }

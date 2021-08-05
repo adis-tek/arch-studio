@@ -29,6 +29,7 @@ function home() {
   <h1 className="h1-large">Welcome</h1>
       <div className="welcome-text-image-container">
       <div className="welcome-text">
+        <div className="welcome-line" />
         <h1 className="h1-small">Welcome to Arch Studio</h1>
 
         <p className="p-body">We have a unique network and skillset to help bring your projects to life. Our 
@@ -60,12 +61,15 @@ function home() {
 
   <div className="featured-and-button">
       <h2 className="h2">Featured</h2>
+
+      <div className="button-container">
       <NavLink exact activeClassName="active" to="/portfolio">
       <button className="button">
       <p className="button-text">See All</p>
       <img className="button-arrow" src={FooterArrow} />
       </button>
       </NavLink>
+    </div>
     </div>
 
     <div className="cards-container">
@@ -97,6 +101,15 @@ function home() {
       <p className="p-body">View All Projects</p>
       </NavLink>
     </div>
+    </div>
+
+    <div className="button-container-home-bottom">
+      <NavLink exact activeClassName="active" to="/portfolio">
+      <button className="button">
+      <p className="button-text">See All</p>
+      <img className="button-arrow" src={FooterArrow} />
+      </button>
+      </NavLink>
     </div>
   </div>
 

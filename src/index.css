@@ -15,28 +15,34 @@ body {
 
 a {
   text-decoration: none;
+  overflow: none;
 }
 
 a:visited {
   text-decoration: none;
   color: inherit;
+  overflow: none;
 }
 
 a:hover {
   text-decoration: none;
   color: inherit;
+  overflow: none;
 }
 a:focus {
   text-decoration: none;
   color: inherit;
+  overflow: none;
 }
 a:active {
   text-decoration: none;
   color: inherit;
+  overflow: none;
 }
 
 .active a {
   text-decoration: underline;
+  overflow: none;
 }
 .input-container {
   position: relative;

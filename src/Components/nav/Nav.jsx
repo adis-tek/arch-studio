@@ -56,7 +56,7 @@ function Nav() {
                 </p>
                 <p className="mobile-nav-link" onClick={toggleMobileNav}>
                 <NavLink activeClassName="active" to="/about">
-                    About
+                    About Us
                 </NavLink>
                 </p>
                 <p className="mobile-nav-link" onClick={toggleMobileNav}>
