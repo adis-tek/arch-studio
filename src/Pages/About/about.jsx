@@ -2,6 +2,7 @@ import React from 'react';
 import './about.scss';
 import PageLine from '../../Assets/icons/page-line.png';
 import Hero from '../../Assets/about/desktop/image-hero.jpg';
+import HeroMobile from '../../Assets/about/mobile/image-hero.jpg';
 import Heritage from '../../Assets/about/desktop/image-heritage.jpg';
 import HeaderLine from '../../Assets/icons/header-line.svg';
 import LinkedIn from '../../Assets/icons/icon-linkedin.svg';
@@ -30,11 +31,15 @@ function about() {
     <title>Frontend Mentor | Arch Studio Website Challenge</title>
     </head>
 <body className="about-body">
-
+<div className="mobile-hero-container">
+<img className="hero-image-mobile-outer" src={HeroMobile} />
+<div className="white-block-mobile" />
+</div>
      <div className="container">
         <div className="hero-container">
         <h1 className="about">About</h1>
             <img className="hero-image" src={Hero} />
+            <img className="hero-image-mobile" src={HeroMobile} />
             <div className="hero-text-container">
                 <div className="hero-inner-text-container">
                 <img className="header-line" src={HeaderLine} />
