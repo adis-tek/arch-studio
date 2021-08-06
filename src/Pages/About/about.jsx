@@ -13,7 +13,7 @@ import Jake from '../../Assets/about/desktop/avatar-jake.jpg';
 import Thompson from '../../Assets/about/desktop/avatar-thompson.jpg';
 import Jackson from '../../Assets/about/desktop/avatar-jackson.jpg';
 import Maria from '../../Assets/about/desktop/avatar-maria.jpg';
-
+ 
 function about() {
     return (
 <>

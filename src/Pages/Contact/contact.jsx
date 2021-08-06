@@ -1,15 +1,18 @@
 import React, { useState, useEffect} from 'react';
 import './contact.scss';
+import HeroMobile from '../../Assets/contact/mobile/image-hero.jpg';
 import PageLine from '../../Assets/icons/page-line.png';
 import Hero from '../../Assets/contact/desktop/image-hero.jpg';
 import HeaderLine from '../../Assets/icons/header-line.svg';
 import BlackArrow from '../../Assets/icons/icon-arrow-black.svg';
 import Arrow from '../../Assets/icons/icon-arrow.svg';
 import MapImage from '../../Assets/contact/desktop/image-map.png';
+import MapImageMobile from '../../Assets/contact/mobile/image-map.png';
 
 function Contact() {
     const [nameInitialized, setNameInitialized] = useState(0);
     const [emailInitialized, setEmailInitialized] = useState(0);
+    const [textInitialized, setTextInitialized] = useState(0);
     const [errorTextName, setErrorTextName] = useState("");
     const [errorTextEmail, setErrorTextEmail] = useState("");
     const [errorTextMessage, setErrorTextMessage] = useState("");
@@ -28,13 +31,16 @@ function Contact() {
         if (name === "" && nameInitialized > 0) {
             setErrorTextName("error-text-name");
             setNameInput("name-input-error");
+        } else {
+            setErrorTextName("");
+            setNameInput("input-initialized");
         }
     }
 
-    useEffect(() => {
-        setNameInput("input-initialized");
-        setEmailInput("email-initialized");
-    }, [])
+    // useEffect(() => {
+    //     setNameInput("input-initialized");
+    //     setEmailInput("email-initialized");
+    // }, [])
 
     useEffect(() => {
         setNameInitialized(1);
@@ -49,6 +55,7 @@ function Contact() {
             setErrorTextName("");
             setNameInput("input-initialized");
         } else {
+            console.log("name empty");
             setNameInput("input-initialized");
         }
     }, [name]);
@@ -56,33 +63,55 @@ function Contact() {
 
     const toggleEmailError = () => {
         if (email === "" && emailInitialized > 0) {
-            setErrorTextName("error-text-email");
-            setNameInput("email-input-error");
-        }
         setEmailInput("email-input-error");
         setErrorTextEmail("error-text-email");
+        } else {
+            setErrorTextEmail("");
+            setEmailInput("input-initialized");
+        }
     }
 
     useEffect(() => {
         setEmailInitialized(1);
-        if (name === "" && emailInitialized < 0) {
+        if (email === "" && emailInitialized < 0) {
             console.log("email empty");
         } else if (isEmail(email) == false && emailInitialized > 0) {
-            setErrorTextName("email-error");
-            setNameInput("email-input-error");
-        } else if (name === "" && emailInitialized > 0) {
-            setErrorTextName("error-text-email");
-        } else if (name.length > 0) {
-            setErrorTextName("");
-            setNameInput("email-initialized");
+            setErrorTextEmail("email-error");
+            setEmailInput("email-input-error");
+        } else if (email === "" && emailInitialized > 0) {
+            setErrorTextEmail("error-text-email");
+        } else if (email.length > 0) {
+            setErrorTextEmail("");
+            setEmailInput("input-initialized");
         } else {
-            setNameInput("email-initialized");
+            setErrorTextEmail("");
+            setEmailInput("input-initialized");
         }
     }, [email]);
 
+    useEffect(() => {
+        setTextInitialized(1);
+        if (text === "" && textInitialized < 0) {
+            console.log("text empty");
+        } else if (text === "" && textInitialized > 0) {
+            setErrorTextMessage("error-text-email");
+        } else if (text.length > 0) {
+            setErrorTextMessage("");
+            setMessageInput("input-initialized");
+        } else {
+            setErrorTextMessage("");
+            setMessageInput("input-initialized");
+        }
+    }, [text]);
+
     const toggleMessageError = () => {
+        if (text === "" && emailInitialized > 0) {
         setMessageInput("message-input-error");
         setErrorTextMessage("error-text-message");
+        } else {
+            setErrorTextEmail("");
+            setMessageInput("input-initialized");
+        }
     }
 
     const isEmail = (email) => {
@@ -167,7 +196,10 @@ function Contact() {
   </div>
 <div className="contact-main"> 
     <body className="contact-body">
-
+    <div className="mobile-hero-container">
+    <img className="hero-image-mobile-outer" src={HeroMobile} />
+    <div className="white-block-mobile" />
+    </div>
         <div className="container">
             <div className="hero-container">
             <h1 className="contact">Contact</h1>
@@ -183,6 +215,45 @@ function Contact() {
                 </div>
             </div>
         </div>
+
+        <img className="header-line-mobile" src={HeaderLine} />
+
+        <div className="line-and-contact-info-container-mobile">
+            <div className="inner-container">
+        <div className="contact-info-line-container">
+        <img className="header-line" src={HeaderLine} />
+        <h1 className="contact-info-header">Contact<br></br>Details</h1>
+        </div>
+        </div>
+        <div className="contact-info-container">
+            <div className="contact-info-section2">
+            <div className="inner-container">
+                <p className="place">Main Office</p>
+                <p className="mail">Mail:	archone@mail.com</p>
+                <p className="address">Address: 1892 Chenoweth Drive TN</p>
+                <p className="phone">Phone: 123-456-3451</p>
+                </div>
+                <button className="view-on-map">
+                    <p className="text">View on Map</p>
+                    <img className="black-arrow" src={BlackArrow} />
+                </button>
+            </div>
+            <div className="contact-info-section3">
+            <div className="inner-container">
+            <p className="place">Office II</p>
+                <p className="mail">Mail: archtwo@mail.com</p>
+                <p className="address">Address: 3399 Wines Lane TX</p>
+                <p className="phone">Phone: 832-123-4321</p>
+             </div>
+             <button className="view-on-map">
+                    <p className="text">View on Map</p>
+                    <img className="black-arrow" src={BlackArrow} />
+            </button>
+            </div>
+        </div>
+    </div>
+
+
         <div className="line-and-contact-info-container">
             <div className="inner-container">
         <div className="contact-info-line-container">
@@ -221,12 +292,14 @@ function Contact() {
 
         <div className="map-container">
             <img className="map" src={MapImage} />
+            <img className="map-mobile" src={MapImageMobile} />
         </div>
 
         <div className="contact-form-container">
             <div className="contact-form-section">
                     <div className="header-container">
                         <h1 className="contact-form-header">Connect<br></br>With Us</h1>
+                        <h1 className="contact-form-header-mobile">Connect With<br></br>Us</h1>
                     </div>
             </div>
             <form className="form" onSubmit={onSubmit}>
