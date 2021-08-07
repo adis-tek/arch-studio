@@ -70,7 +70,7 @@ function Contact() {
             setEmailInput("input-initialized");
         }
     }
-
+ 
     useEffect(() => {
         setEmailInitialized(1);
         if (email === "" && emailInitialized < 0) {
@@ -147,7 +147,7 @@ function Contact() {
             formChecks++;
         }
 
-        if (formChecks === 4) {
+        if (formChecks === 3) {
             console.log("FORM SUBMITTED SUCCESSFULLY",
             {
                 Name: {name},
@@ -195,11 +195,11 @@ function Contact() {
     <h1 className="current-page">CONTACT</h1>
   </div>
 <div className="contact-main"> 
-    <body className="contact-body">
     <div className="mobile-hero-container">
     <img className="hero-image-mobile-outer" src={HeroMobile} />
     <div className="white-block-mobile" />
     </div>
+    <body className="contact-body">
         <div className="container">
             <div className="hero-container">
             <h1 className="contact">Contact</h1>
@@ -299,7 +299,7 @@ function Contact() {
             <div className="contact-form-section">
                     <div className="header-container">
                         <h1 className="contact-form-header">Connect<br></br>With Us</h1>
-                        <h1 className="contact-form-header-mobile">Connect With<br></br>Us</h1>
+                        <h1 className="contact-form-header-mobile">Connect<br></br>With Us</h1>
                     </div>
             </div>
             <form className="form" onSubmit={onSubmit}>

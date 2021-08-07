@@ -11,6 +11,7 @@ body {
   /* border: 1px solid red; */
   overflow-x: hidden;
   outline: none;
+  border: none;
 }
 
 a {
