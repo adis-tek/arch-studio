@@ -8,7 +8,7 @@ import Slider from '../../Components/slider/ImageSlider';
 import { ImageSliderData } from '../../Components/slider/ImageSliderData';
 
 function home() {
-  return (
+  return ( 
     <>
     <div className="page-header-faded">
     <img className="page-line" src={PageLine} />
@@ -25,6 +25,7 @@ function home() {
   <body className="home-body">
     <div className="container">
 
+    <h1 className="h1-large-mobile">Welcome</h1>
   <div className="welcome">
   <h1 className="h1-large">Welcome</h1>
       <div className="welcome-text-image-container">
