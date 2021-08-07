@@ -187,8 +187,10 @@
   }
 }
 
-@mixin pageHeaderFaded($margin) {
-  .page-header-faded {
+/* I created 4 of these for each page due to them not functioning as individual mixins on each seperate page. */
+
+@mixin pageHeaderFadedHome() {
+  .page-header-faded-home {
     position: absolute;
     display: flex;
     align-items: center;
@@ -208,14 +210,114 @@
     }
     .page-line {
       position: relative;
-      margin: $margin;
     }
     .current-page {
       font-size: 15px;
-      letter-spacing: 16px;
+      letter-spacing: 13px;
       font-weight: 500;
       transform: rotate(0.25turn);
       color: rgba(200, 204, 216, 1);
+      margin: 70px !important;
+    }
+  }
+}
+
+@mixin pageHeaderFadedPortfolio() {
+  .page-header-faded-portfolio {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 3.75vw;
+    width: 25px;
+    height: 100%;
+    @media (max-width: 1025px) {
+      left: 3vw;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+    @media (max-width: 421px) {
+      display: none;
+    }
+    .page-line {
+      position: relative;
+    }
+    .current-page {
+      font-size: 15px;
+      letter-spacing: 13px;
+      font-weight: 500;
+      transform: rotate(0.25turn);
+      color: rgba(200, 204, 216, 1);
+      margin: 130px !important;
+    }
+  }
+}
+
+@mixin pageHeaderFadedAbout() {
+  .page-header-faded-about {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 3.75vw;
+    width: 25px;
+    height: 100%;
+    @media (max-width: 1025px) {
+      left: 3vw;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+    @media (max-width: 421px) {
+      display: none;
+    }
+    .page-line {
+      position: relative;
+    }
+    .current-page {
+      font-size: 15px;
+      letter-spacing: 13px;
+      font-weight: 500;
+      transform: rotate(0.25turn);
+      color: rgba(200, 204, 216, 1);
+      margin: 80px !important;
+    }
+  }
+}
+
+@mixin pageHeaderFadedContact() {
+  .page-header-faded-contact {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 3.75vw;
+    width: 25px;
+    height: 100%;
+    @media (max-width: 1025px) {
+      left: 3vw;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+    @media (max-width: 421px) {
+      display: none;
+    }
+    .page-line {
+      position: relative;
+      margin: 0px;
+    }
+    .current-page {
+      font-size: 15px;
+      letter-spacing: 13px;
+      font-weight: 500;
+      transform: rotate(0.25turn);
+      color: rgba(200, 204, 216, 1);
+      margin: 110px !important;
     }
   }
 }

@@ -18,7 +18,7 @@ import Maria from '../../Assets/about/desktop/avatar-maria.jpg';
 function about() {
     return ( 
 <>
-<div className="page-header-faded">
+<div className="page-header-faded-about">
     <img className="page-line" src={PageLine} />
     <h1 className="current-page">ABOUT</h1>
   </div>

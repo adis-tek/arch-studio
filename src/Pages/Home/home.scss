@@ -1,6 +1,6 @@
 @use '../../styles';
 
-@include styles.pageHeaderFaded(0px 0px 20px 0px);
+@include styles.pageHeaderFadedHome();
 
 .home-main {
   position: relative;

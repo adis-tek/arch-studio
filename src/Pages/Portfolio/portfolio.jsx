@@ -5,7 +5,7 @@ import PageLine from '../../Assets/icons/page-line.png';
 function portfolio() {
     return (
         <>
-    <div className="page-header-faded">
+    <div className="page-header-faded-portfolio">
     <img className="page-line" src={PageLine} />
     <h1 className="current-page">PORTFOLIO</h1>
     </div>

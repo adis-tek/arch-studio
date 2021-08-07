@@ -190,7 +190,7 @@ function Contact() {
 
     return (
     <>
-    <div className="page-header-faded">
+    <div className="page-header-faded-contact">
     <img className="page-line" src={PageLine} />
     <h1 className="current-page">CONTACT</h1>
   </div>

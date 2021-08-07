@@ -1,6 +1,6 @@
 @use '../../styles';
 
-@include styles.pageHeaderFaded(0px 0px 220px 0px);
+@include styles.pageHeaderFadedPortfolio();
 
 .portfolio-main {
   position: relative;

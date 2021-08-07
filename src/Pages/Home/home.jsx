@@ -10,7 +10,7 @@ import { ImageSliderData } from '../../Components/slider/ImageSliderData';
 function home() {
   return ( 
     <>
-    <div className="page-header-faded">
+    <div className="page-header-faded-home">
     <img className="page-line" src={PageLine} />
     <h1 className="current-page">HOME</h1>
   </div>

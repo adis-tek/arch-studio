@@ -1,6 +1,6 @@
 @use '../../styles';
 
-@include styles.pageHeaderFaded(0px 0px 120px 0px);
+@include styles.pageHeaderFadedContact();
 
 .contact-main {
   position: relative;
