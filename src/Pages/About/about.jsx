@@ -2,6 +2,7 @@ import React from 'react';
 import './about.scss';
 import PageLine from '../../Assets/icons/page-line.png';
 import Hero from '../../Assets/about/desktop/image-hero.jpg';
+import HeroTablet from '../../Assets/about/tablet/image-hero.jpg';
 import HeroMobile from '../../Assets/about/mobile/image-hero.jpg';
 import Heritage from '../../Assets/about/desktop/image-heritage.jpg';
 import HeaderLine from '../../Assets/icons/header-line.svg';
@@ -15,7 +16,7 @@ import Jackson from '../../Assets/about/desktop/avatar-jackson.jpg';
 import Maria from '../../Assets/about/desktop/avatar-maria.jpg';
  
 function about() {
-    return (
+    return ( 
 <>
 <div className="page-header-faded">
     <img className="page-line" src={PageLine} />
@@ -32,6 +33,7 @@ function about() {
     </head>
 <body className="about-body">
 <div className="mobile-hero-container">
+<img className="hero-image-tablet-outer" src={HeroTablet} />
 <img className="hero-image-mobile-outer" src={HeroMobile} />
 <div className="white-block-mobile" />
 </div>
@@ -81,6 +83,10 @@ function about() {
         <div className="description">
         <p className="name">Jake Richards</p>
         <p className="title">Chief Architect</p> 
+        <div className="social-icon-container-mobile">
+        <img className="linkedin" src={LinkedIn} />
+        <img className="twitter" src={Twitter} />
+        </div>
         </div>
 
         <div className="spacing" />
@@ -92,6 +98,10 @@ function about() {
         <div className="description">
         <p className="name">Thompson Smith</p>
         <p className="title">Head of Finance</p>
+        <div className="social-icon-container-mobile">
+        <img className="linkedin" src={LinkedIn} />
+        <img className="twitter" src={Twitter} />
+        </div>
         </div>
         </div>
 
@@ -103,6 +113,10 @@ function about() {
         <div className="description">
         <p className="name">Jackson Rourke</p>
         <p className="title">Lead Designer</p>
+        <div className="social-icon-container-mobile">
+        <img className="linkedin" src={LinkedIn} />
+        <img className="twitter" src={Twitter} />
+        </div>
         </div>
 
         <div className="spacing" />
@@ -114,6 +128,10 @@ function about() {
         <div className="description">
         <p className="name">Maria Simpson</p>
         <p className="title">Senior Architect</p>
+        <div className="social-icon-container-mobile">
+        <img className="linkedin" src={LinkedIn} />
+        <img className="twitter" src={Twitter} />
+        </div>
         </div>
         </div>
         </div>

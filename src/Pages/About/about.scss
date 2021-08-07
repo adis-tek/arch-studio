@@ -17,13 +17,29 @@
         width: 100%;
         height: auto;
       }
-      .hero-image-mobile-outer {
+      .hero-image-tablet-outer {
         display: none;
         @media screen and (max-width: styles.$screen-md-max) {
           position: relative;
           display: flex;
           width: 100%;
+          height: 500px;
+          object-fit: cover;
+          margin: 0px 0px 10px 0px;
+        }
+        @media screen and (max-width: styles.$screen-sm-max) {
+          display: none;
+        }
+      }
+      .hero-image-mobile-outer {
+        display: none;
+        @media screen and (max-width: styles.$screen-sm-max) {
+          position: relative;
+          display: flex;
+          width: 100%;
           height: auto;
+          object-fit: cover;
+          margin: 0px 0px 10px 0px;
         }
       }
       .white-block-mobile {
@@ -77,6 +93,7 @@
           object-fit: cover;
           @media screen and (max-width: styles.$screen-lg-max) {
             width: 100%;
+            margin: 0px 0px 10px 0px;
           }
           @media screen and (max-width: styles.$screen-md-max) {
             display: none;
@@ -102,7 +119,15 @@
           @media screen and (max-width: styles.$screen-md-max) {
             position: relative;
             width: 90%;
-            height: 300px;
+            height: 250px;
+            padding: 20px 0px 0px 0px;
+            margin: 0 0px 0px 0px;
+            right: 5vw;
+          }
+          @media screen and (max-width: 480px) {
+            width: 90%;
+            height: 250px;
+            padding: 70px 0px 0px 0px;
             right: 5vw;
           }
           .hero-inner-text-container {
@@ -126,7 +151,12 @@
               margin: 0px 0px 50px 0px;
               padding: 5px 0px;
               @media screen and (max-width: styles.$screen-md-max) {
-                font-size: 40px;
+                font-size: 45px;
+                line-height: 48px;
+                margin: 0px 0px 25px 0px;
+              }
+              @media screen and (max-width: styles.$screen-sm-max) {
+                font-size: 10vw;
                 line-height: 48px;
                 margin: 0px 0px 25px 0px;
               }
@@ -176,6 +206,16 @@
             color: styles.$very-dark-blue;
             margin: 0px 0px 50px 0px;
             padding: 5px 0px;
+            @media screen and (max-width: styles.$screen-md-max) {
+              font-size: 45px;
+              line-height: 48px;
+              margin: 0px 0px 25px 0px;
+            }
+            @media screen and (max-width: styles.$screen-sm-max) {
+              font-size: 10vw;
+              line-height: 48px;
+              margin: 0px 0px 25px 0px;
+            }
           }
           .p-body {
             width: 90%;
@@ -200,7 +240,7 @@
         margin: 0px 0px 150px 0px;
         @media screen and (max-width: styles.$screen-lg-max) {
           flex-direction: column;
-          margin: 0px 0px 0px 0px;
+          margin: 0px 0px 100px 0px;
         }
         .header-container {
           display: flex;
@@ -220,6 +260,16 @@
             color: styles.$very-dark-blue;
             margin: 0px 0px 50px 0px;
             padding: 5px 0px;
+            @media screen and (max-width: styles.$screen-md-max) {
+              font-size: 45px;
+              line-height: 48px;
+              margin: 0px 0px 25px 0px;
+            }
+            @media screen and (max-width: styles.$screen-sm-max) {
+              font-size: 10vw;
+              line-height: 48px;
+              margin: 0px 0px 25px 0px;
+            }
           }
         }
         .quad-container {
@@ -258,11 +308,20 @@
               }
               &:hover {
                 filter: brightness(60%);
+                @media screen and (max-width: styles.$screen-lg-max) {
+                  filter: none;
+                }
                 .linkedin {
                   display: block;
+                  @media screen and (max-width: styles.$screen-lg-max) {
+                    display: none;
+                  }
                 }
                 .twitter {
                   display: block;
+                  @media screen and (max-width: styles.$screen-lg-max) {
+                    display: none;
+                  }
                 }
               }
             }
@@ -277,8 +336,8 @@
             .twitter {
               display: none;
               position: relative;
-              width: 35px;
-              height: 35px;
+              width: 40px;
+              height: auto;
               object-fit: cover;
               margin: 0;
             }
@@ -299,6 +358,34 @@
                 color: styles.$very-dark-blue;
                 font-weight: 500;
                 margin: 7.5px 0px 0px 0px;
+              }
+              .social-icon-container-mobile {
+                display: none;
+                @media screen and (max-width: styles.$screen-lg-max) {
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 200px;
+                  height: auto;
+                }
+                .linkedin {
+                  display: flex;
+                  position: relative;
+                  width: 35px;
+                  height: auto;
+                  object-fit: cover;
+                  padding: 10px 20px 10px 0px;
+                  margin: 10px 10px 10px 0px;
+                }
+                .twitter {
+                  display: flex;
+                  position: relative;
+                  width: 40px;
+                  height: auto;
+                  object-fit: cover;
+                  padding: 10px 10px 10px 10px;
+                  margin: 10px 10px 10px 0px;
+                }
               }
             }
             .architect-profile-thompson {
@@ -315,11 +402,20 @@
               }
               &:hover {
                 filter: brightness(60%);
+                @media screen and (max-width: styles.$screen-lg-max) {
+                  filter: none;
+                }
                 .linkedin {
                   display: block;
+                  @media screen and (max-width: styles.$screen-lg-max) {
+                    display: none;
+                  }
                 }
                 .twitter {
                   display: block;
+                  @media screen and (max-width: styles.$screen-lg-max) {
+                    display: none;
+                  }
                 }
               }
             }
@@ -356,6 +452,34 @@
                 color: styles.$very-dark-blue;
                 font-weight: 500;
                 margin: 7.5px 0px 0px 0px;
+              }
+              .social-icon-container-mobile {
+                display: none;
+                @media screen and (max-width: styles.$screen-lg-max) {
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 200px;
+                  height: auto;
+                }
+                .linkedin {
+                  display: flex;
+                  position: relative;
+                  width: 35px;
+                  height: auto;
+                  object-fit: cover;
+                  padding: 10px 20px 10px 0px;
+                  margin: 10px 10px 10px 0px;
+                }
+                .twitter {
+                  display: flex;
+                  position: relative;
+                  width: 40px;
+                  height: auto;
+                  object-fit: cover;
+                  padding: 10px 10px 10px 10px;
+                  margin: 10px 10px 10px 0px;
+                }
               }
             }
           }
@@ -383,11 +507,20 @@
               }
               &:hover {
                 filter: brightness(60%);
+                @media screen and (max-width: styles.$screen-lg-max) {
+                  filter: none;
+                }
                 .linkedin {
                   display: block;
+                  @media screen and (max-width: styles.$screen-lg-max) {
+                    display: none;
+                  }
                 }
                 .twitter {
                   display: block;
+                  @media screen and (max-width: styles.$screen-lg-max) {
+                    display: none;
+                  }
                 }
               }
             }
@@ -402,8 +535,8 @@
             .twitter {
               display: none;
               position: relative;
-              width: 35px;
-              height: 35px;
+              width: 40px;
+              height: auto;
               object-fit: cover;
               margin: 0;
             }
@@ -424,6 +557,34 @@
                 color: styles.$very-dark-blue;
                 font-weight: 500;
                 margin: 7.5px 0px 0px 0px;
+              }
+              .social-icon-container-mobile {
+                display: none;
+                @media screen and (max-width: styles.$screen-lg-max) {
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 200px;
+                  height: auto;
+                }
+                .linkedin {
+                  display: flex;
+                  position: relative;
+                  width: 35px;
+                  height: auto;
+                  object-fit: cover;
+                  padding: 10px 20px 10px 0px;
+                  margin: 10px 10px 10px 0px;
+                }
+                .twitter {
+                  display: flex;
+                  position: relative;
+                  width: 40px;
+                  height: auto;
+                  object-fit: cover;
+                  padding: 10px 10px 10px 10px;
+                  margin: 10px 10px 10px 0px;
+                }
               }
             }
             .architect-profile-maria {
@@ -440,11 +601,20 @@
               }
               &:hover {
                 filter: brightness(60%);
+                @media screen and (max-width: styles.$screen-lg-max) {
+                  filter: none;
+                }
                 .linkedin {
                   display: block;
+                  @media screen and (max-width: styles.$screen-lg-max) {
+                    display: none;
+                  }
                 }
                 .twitter {
                   display: block;
+                  @media screen and (max-width: styles.$screen-lg-max) {
+                    display: none;
+                  }
                 }
               }
             }
@@ -459,8 +629,8 @@
             .twitter {
               display: none;
               position: relative;
-              width: 35px;
-              height: 35px;
+              width: 40px;
+              height: auto;
               object-fit: cover;
               margin: 0;
             }
@@ -481,6 +651,34 @@
                 color: styles.$very-dark-blue;
                 font-weight: 500;
                 margin: 7.5px 0px 0px 0px;
+              }
+              .social-icon-container-mobile {
+                display: none;
+                @media screen and (max-width: styles.$screen-lg-max) {
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 200px;
+                  height: auto;
+                }
+                .linkedin {
+                  display: flex;
+                  position: relative;
+                  width: 35px;
+                  height: auto;
+                  object-fit: cover;
+                  padding: 10px 20px 10px 0px;
+                  margin: 10px 10px 10px 0px;
+                }
+                .twitter {
+                  display: flex;
+                  position: relative;
+                  width: 40px;
+                  height: auto;
+                  object-fit: cover;
+                  padding: 10px 10px 10px 10px;
+                  margin: 10px 10px 10px 0px;
+                }
               }
             }
           }
