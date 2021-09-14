@@ -116,10 +116,9 @@
           display: flex;
           justify-content: flex-end;
           align-items: center;
-          height: auto;
-          @media (max-width: styles.$screen-lg-max) {
-            width: 100%;
-          }
+          width: 100%;
+          height: 650px;
+          overflow: hidden;
           .welcome-text {
             position: relative;
             @include styles.flexCenter(flex-start, column);
