@@ -31,6 +31,9 @@
       @media screen and (max-width: styles.$screen-md-max) {
         display: none;
       }
+      a {
+        color: styles.$dark-grey;
+      }
     }
     .nav-mobile-icon {
       display: none;
