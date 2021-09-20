@@ -413,6 +413,9 @@
             bottom: 50px;
             color: white;
             margin: 0px 0px 0px 30px;
+            &a {
+              color: styles.$white;
+            }
             .featured-card-header {
               position: relative;
               font-size: 18px;
