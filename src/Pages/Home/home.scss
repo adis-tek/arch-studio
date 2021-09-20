@@ -307,6 +307,9 @@
               font-size: 18px;
               line-height: 25px;
             }
+            .active {
+              color: styles.$white;
+            }
             .p-body {
               position: relative;
               font-size: 15px;
@@ -363,6 +366,9 @@
               line-height: 25px;
               position: absolute;
             }
+            .active {
+              color: styles.$white;
+            }
             .p-body {
               position: relative;
               font-size: 15px;
@@ -413,14 +419,14 @@
             bottom: 50px;
             color: white;
             margin: 0px 0px 0px 30px;
-            &a {
-              color: styles.$white;
-            }
             .featured-card-header {
               position: relative;
               font-size: 18px;
               line-height: 25px;
               position: absolute;
+            }
+            .active {
+              color: styles.$white;
             }
             .p-body {
               position: relative;
