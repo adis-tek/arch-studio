@@ -78,7 +78,7 @@ function home() {
       <h1 className="featured-card-number">1</h1>
       <div className="featured-text-container">
       <p className="featured-card-header">Project Del Sol</p>
-      <NavLink exact activeClassName="active" to="/portfolio">
+      <NavLink exact className="card-link" to="/portfolio">
       <p className="p-body">View All Projects</p>
       </NavLink>
       </div>
@@ -88,7 +88,7 @@ function home() {
     <h1 className="featured-card-number">2</h1>
     <div className="featured-text-container">
     <p className="featured-card-header">228B Tower</p>
-    <NavLink exact activeClassName="active" to="/portfolio">
+    <NavLink exact className="card-link" to="/portfolio">
       <p className="p-body">View All Projects</p>
       </NavLink>
     </div>
@@ -98,7 +98,7 @@ function home() {
     <h1 className="featured-card-number">3</h1>
     <div className="featured-text-container">
     <p className="featured-card-header">Le Prototype</p>
-    <NavLink exact activeClassName="active" to="/portfolio">
+    <NavLink exact className="card-link" to="/portfolio">
       <p className="p-body">View All Projects</p>
       </NavLink>
     </div>
