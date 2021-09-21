@@ -125,9 +125,10 @@
             right: 5vw;
           }
           @media screen and (max-width: 480px) {
-            width: 90%;
-            height: 250px;
-            padding: 70px 0px 0px 0px;
+            position: relative;
+            width: 85%;
+            height: 100%;
+            padding: 10px 0px 0px 0px;
             right: 5vw;
           }
           .hero-inner-text-container {
@@ -137,6 +138,11 @@
             right: 10px;
             @media screen and (max-width: styles.$screen-md-max) {
               width: 95%;
+            }
+            @media screen and (max-width: styles.$screen-sm-max) {
+              position: relative;
+              height: 100%;
+              right: 0;
             }
             .header-line {
               margin: 0px 0px 80px 0px;
