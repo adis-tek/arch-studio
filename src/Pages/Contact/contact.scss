@@ -170,7 +170,7 @@
         }
         @media screen and (max-width: styles.$screen-sm-max) {
           left: 8vw;
-          margin: 100px 0px 100px 0px;
+          margin: 60px 0px 50px 0px;
         }
       }
       .line-and-contact-info-container-mobile {
@@ -303,6 +303,7 @@
               @media screen and (max-width: styles.$screen-sm-max) {
                 position: relative;
                 left: 8vw;
+                padding: 0px 0px 0px 0px;
               }
               &:hover {
                 text-decoration: underline;
