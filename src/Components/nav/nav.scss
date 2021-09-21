@@ -80,6 +80,11 @@
         position: relative;
         font-size: 18px;
         margin-bottom: 20px;
+        .mobile-link {
+          position: relative;
+          display: flex;
+          color: styles.$very-dark-blue;
+        }
       }
     }
   }

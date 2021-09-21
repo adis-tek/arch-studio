@@ -50,17 +50,17 @@ function Nav() {
             <div className="mobile-menu-container">
                 <div className="mobile-menu-border">
                 <p className="mobile-nav-link" onClick={toggleMobileNav}>
-                <NavLink activeClassName="active" to="/portfolio">
+                <NavLink className="mobile-link" to="/portfolio">
                     Portfolio
                 </NavLink>
                 </p>
                 <p className="mobile-nav-link" onClick={toggleMobileNav}>
-                <NavLink activeClassName="active" to="/about">
+                <NavLink className="mobile-link" to="/about">
                     About Us
                 </NavLink>
                 </p>
                 <p className="mobile-nav-link" onClick={toggleMobileNav}>
-                <NavLink activeClassName="active" to="/contact">
+                <NavLink className="mobile-link" to="/contact">
                     Contact
                 </NavLink>
                 </p>
