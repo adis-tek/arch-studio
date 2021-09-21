@@ -197,9 +197,13 @@
         }
         .contact-info-line-container {
           position: absolute;
+          display: block;
           width: 100%;
           margin: 140px 0px 0px 0px;
           padding: 0px 0px 0px 0px;
+          @media screen and (max-width: styles.$screen-sm-max) {
+            margin: 100px 0px 0px 0px;
+          }
           .header-line {
             position: relative;
             display: block;
