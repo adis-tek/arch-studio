@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import UtilScroll from './utilScroll';
 import Nav from './Components/nav/Nav.jsx';
 import Footer from './Components/footer/Footer.jsx';
 import Home from './Pages/Home/home.jsx';
@@ -13,6 +14,7 @@ import Slider from './Components/slider/ImageSlider.jsx';
 function App() {
   return (
     <Router>
+    <UtilScroll />
       <div className="App">
         <Nav />
         <Switch>
