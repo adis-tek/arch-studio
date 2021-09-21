@@ -170,7 +170,7 @@
         }
         @media screen and (max-width: styles.$screen-sm-max) {
           left: 8vw;
-          margin: 80px 0px 20px 0px;
+          margin: 70px 0px 60px 0px;
         }
       }
       .line-and-contact-info-container-mobile {
@@ -202,7 +202,8 @@
           margin: 140px 0px 0px 0px;
           padding: 0px 0px 0px 0px;
           @media screen and (max-width: styles.$screen-sm-max) {
-            margin: 100px 0px 0px 0px;
+            padding: 20px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
           }
           .header-line {
             position: relative;
@@ -238,7 +239,7 @@
           height: auto;
           margin: 200px 0px 0px 0px;
           @media screen and (max-width: styles.$screen-sm-max) {
-            margin: 175px 0px 0px 0px;
+            margin: 95px 0px 0px 0px;
           }
           .contact-info-section2 {
             width: 60%;
