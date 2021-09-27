@@ -1,4 +1,4 @@
-@use '../../styles';
+@use "../../styles";
 
 @include styles.pageHeaderFadedAbout();
 
@@ -127,8 +127,15 @@
           @media screen and (max-width: 480px) {
             position: relative;
             width: 85%;
-            height: 100%;
-            padding: 10px 0px 0px 0px;
+            height: auto;
+            padding: 280px 0px 0px 0px;
+            right: 5vw;
+          }
+          @media screen and (max-width: styles.$screen-sm-max) {
+            position: relative;
+            width: 85%;
+            height: auto;
+            padding: 30px 0px 0px 0px;
             right: 5vw;
           }
           .hero-inner-text-container {
