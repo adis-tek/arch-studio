@@ -191,8 +191,10 @@ function Contact() {
     return (
     <>
     <div className="page-header-faded-contact">
+    <div className="element-container">
     <img className="page-line" src={PageLine} />
     <h1 className="current-page">CONTACT</h1>
+    </div>
   </div>
 <div className="contact-main"> 
     <div className="mobile-hero-container">

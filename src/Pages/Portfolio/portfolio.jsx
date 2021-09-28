@@ -6,8 +6,10 @@ function portfolio() {
     return (
         <>
     <div className="page-header-faded-portfolio">
+    <div className="element-container">
     <img className="page-line" src={PageLine} />
     <h1 className="current-page">PORTFOLIO</h1>
+    </div>
     </div>
 
     <div className="portfolio-main">

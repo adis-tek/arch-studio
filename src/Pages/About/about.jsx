@@ -19,8 +19,10 @@ function about() {
     return ( 
 <>
 <div className="page-header-faded-about">
+    <div className="element-container">
     <img className="page-line" src={PageLine} />
     <h1 className="current-page">ABOUT</h1>
+    </div>
   </div>
 <div className="about-main">
     <head>

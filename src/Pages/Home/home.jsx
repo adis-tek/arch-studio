@@ -11,9 +11,11 @@ function home() {
   return ( 
     <>
     <div className="page-header-faded-home">
+    <div className="element-container">
     <img className="page-line" src={PageLine} />
     <h1 className="current-page">HOME</h1>
-  </div>
+    </div>
+    </div>
 <div className="home-main">
   <head>
   <meta charset="UTF-8" />
