@@ -74,7 +74,7 @@ function portfolio() {
     <div className="three-cards-container3">
         <div className="card1">
             <div className="featured-text-container">
-                <p className="featured-card-header">Grand Edelweiss Hotel</p>
+                <p className="featured-card-header">Grand Edelweiss</p>
                 <p className="p-body">December 2013</p>
             </div>
         </div>
