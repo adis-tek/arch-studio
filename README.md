@@ -1,3 +1,23 @@
+# Arch Studio - Architecture Design Studio
+This is a pretend architecture design studio.
+## Features
+* A multi-page layout that showcases various architecture projects.
+* A fully mobile-responsive design from desktop to tablet and to mobile.
+* A modern UI/UX layout that requires sophisticated placement and responsive code.
+* A short form with real-time validation.
+
+## Technology
+* This app was built using the React framework.
+* Sass styling, repeatable mixins, and variables used for additional reusability.
+* React Router is an additional dependency used for page navigation.
+
+## Lessons Learned
+* How to create a mobile responsive layout for multiple pages.
+* How to verify a form in real-time.
+* How to work with oddly placed elements.
+* How to create a responsive modern UI/UX layout.
+
+---
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
