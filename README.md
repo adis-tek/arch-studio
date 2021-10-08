@@ -14,8 +14,7 @@ This is a pretend architecture design studio.
 ## Lessons Learned
 * How to create a mobile responsive layout for multiple pages.
 * How to verify a form in real-time.
-* How to work with oddly placed elements.
-* How to create a responsive modern UI/UX layout.
+* How to create a responsive and modern UI/UX layout.
 
 ---
 # Getting Started with Create React App
