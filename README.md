@@ -1,5 +1,5 @@
-# Arch Studio - Architecture Design Studio
-This is a pretend architecture design studio.
+# Arch Studio - An Architecture Design Studio
+This is a pretend architecture design studio website.
 ## Features
 * A multi-page layout that showcases various architecture projects.
 * A fully mobile-responsive design from desktop to tablet and to mobile.
